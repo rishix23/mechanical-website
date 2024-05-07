@@ -1,7 +1,12 @@
 [build]
   publish = "./frontend/.next"
-  command = "cd ./frontend && npm run build"
-
+  command = "cd frontend && npm run build"
+  commandOrigin = "config"
+  publishOrigin = "config"
+  [build.environment]
+    NEXT_ROOT = "./frontend"
+    PATH = "$PATH:/frontend/node_modules/.bin"
+    
 [dev]
   command = "npm run dev"
   port = 3000
