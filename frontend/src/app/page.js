@@ -9,7 +9,7 @@ function Home() {
       <p>Welcome to my website!</p>
       <h3>
         <Link href="/about">
-          <p>About Us Page</p>
+          <p>About Us</p>
         </Link>
       </h3>
       <h3>
