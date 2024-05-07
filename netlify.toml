@@ -1,10 +1,6 @@
 [build]
   publish = "./frontend/.next"
-  command = "cd frontend && npm run build"
-  commandOrigin = "config"
-  publishOrigin = "config"
-  [build.environment]
-    NEXT_ROOT = "./frontend"
+  command = "npm run next build"
 
 [dev]
   command = "npm run dev"
