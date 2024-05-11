@@ -1,11 +1,14 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
-import Logo from "../../../public/next.svg";
+import Logo from "../../../public/favicon.ico";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div> {/* Logo here */} </div>
+      <div className={styles.box}>
+        image goes here
+        {/* <img src={Logo}></img> */}
+      </div>
       <div className={styles.box}>
         <ul>
           <li>

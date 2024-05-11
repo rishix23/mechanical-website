@@ -1,15 +1,13 @@
 import Head from "next/head";
 
-function AboutPage() {
+export default function Contact() {
   return (
     <div>
       <Head>
-        <title>About Us</title>
+        <title>Contact Us</title>
       </Head>
-      <h1>About Us</h1>
-      <p>This is the contact page.</p>
+      <h1>Contact</h1>
+      <p>This is the contact page</p>
     </div>
   );
 }
-
-export default AboutPage;

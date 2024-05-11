@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-function AboutPage() {
+export default function About() {
   return (
     <div>
       <Head>
@@ -11,5 +11,3 @@ function AboutPage() {
     </div>
   );
 }
-
-export default AboutPage;

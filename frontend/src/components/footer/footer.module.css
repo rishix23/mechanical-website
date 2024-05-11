@@ -4,7 +4,14 @@
     background: grey;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px
+    padding: 10px;
+    margin-top: auto
+}
+
+.footer .box {
+    display: flex;
+    width: 200px;
+    padding: 10px
 }
 
 .footer .ul {
@@ -16,8 +23,3 @@
     color: black
 }
 
-.footer .box {
-    display: flex;
-    width: 200px;
-    padding: 50px
-}
