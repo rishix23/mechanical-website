@@ -23,3 +23,10 @@
     color: black
 }
 
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .footer {
+      height: 30px;
+      padding: 5px;
+    }
+  }
