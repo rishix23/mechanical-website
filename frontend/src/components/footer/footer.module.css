@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background: grey;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px
+}
+
+.footer .ul {
+    list-style: none;
+    padding: 100px
+}
+
+.footer .li {
+    color: black
+}
+
+.footer .box {
+    display: flex;
+    width: 200px;
+    padding: 50px
+}
