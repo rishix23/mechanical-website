@@ -1,5 +1,5 @@
-import styles from "../styles/page.module.css";
 import Head from "next/head";
+import Section from "../components/section/section.js";
 
 export default function Home() {
   return (
@@ -9,6 +9,9 @@ export default function Home() {
       </Head>
       <h1>Home</h1>
       <p>This is the home page</p>
+      <Section>
+        <h1>"This is my section"</h1>
+      </Section>
     </div>
   );
 }

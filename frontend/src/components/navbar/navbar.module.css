@@ -1,22 +1,53 @@
 .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    background: grey;
-    padding: 15px;
-    gap: 20px; /* add 20px of gap between links */
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 9999; 
+  font-size: var(--size-lg);
   }
-  
-.navbar a { /* target the links inside the navbar */
-    margin: 0 10px; /* add 10px of horizontal margin */
-    padding: 10px; /* add 10px of padding */
+
+.navbar__link {
+  display: block; /* Show links by default */
+}
+
+.navbar__button {
+  display: none; /* Hide button by default */
+  /* ... other styles ... */
+}
+
+
+/* xs */
+/* @media (min-width: 475px) {
+  } */
+
+/* sm */
+/* @media (min-width: 640px) {
+
+} */
+
+/* md */
+@media (max-width: 768px) {
+  .navbar__link {
+    display: none; /* Hide links */
   }
-  
-  /* // Media queries for responsiveness */
-  @media (max-width: 600px) {
-    .navbar {
-      flex-direction: column;
-    }
+
+  .navbar__button {
+    display: flex; /* Show button */
+    color: white;
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+    align-items: end;
   }
+}
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
