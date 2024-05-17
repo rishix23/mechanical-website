@@ -10,7 +10,7 @@ export default function Home() {
       <h1>Home</h1>
       <p>This is the home page</p>
       <Section>
-        <h1>"This is my section"</h1>
+        <h1>This is a section</h1>
       </Section>
     </div>
   );
