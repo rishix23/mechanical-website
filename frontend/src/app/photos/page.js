@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Photos() {
   return (
-    <div>
+    <div className="container">
       <Head>
         <title>Photos</title>
       </Head>

@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Cooling() {
   return (
-    <div>
+    <div className="container">
       <Head>
         <title>Cooling</title>
       </Head>
