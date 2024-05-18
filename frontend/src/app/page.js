@@ -11,7 +11,7 @@ export default function Home() {
         <h1>Home</h1>
         <p>This is the home page</p>
       </Section>
-      <Section className="container">
+      <Section className="container section">
         <h1>This is a section</h1>
       </Section>
     </>
