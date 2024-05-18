@@ -4,7 +4,7 @@ import Logo from "../../../public/favicon.ico";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footer} container`}>
+    <footer className={`${styles.footer} container section`}>
       <div className={styles.box}>
         image goes here
         {/* <img src={Logo}></img> */}
