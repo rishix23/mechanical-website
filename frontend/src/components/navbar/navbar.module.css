@@ -7,22 +7,27 @@
   position: relative;
   z-index: 99999; 
   font-size: var(--size-md);
-  }
+}
 
 .navbar__link {
     display: none; /* Hide links */
-  }
-
-.navbar__button {
-    display: flex; /* Show button */
-    color: white;
-    width: var(--size-7xl);
-    height: var(--size-7xl);
-    margin-left: 1px;
-    background: transparent; /* Ensure background is transparent */
-    border: none; /* Remove default button border */
 }
 
+.navbar__button {
+        display: flex;
+        color: white;
+        width: 48px; /* Adjust the size if needed */
+        height: 48px; /* Adjust the size if needed */
+        background: transparent; /* Ensure the background isn't interfering */
+        border: none; /* Remove any default border */
+        align-items: center; /* Center the SVG within the button */
+        justify-content: center; /* Center the SVG within the button */
+}
+      
+.navbar__button svg {
+    stroke: red; /* Change the stroke color to something noticeable */
+  }
+  
 .navbar__button__menu {
   position: absolute;
   top: 0;
