@@ -33,7 +33,7 @@ export default function Home() {
           <div className={styles.serviceBox}>
             <FontAwesomeIcon icon={faIndustry} className={styles.serviceIcon} />
             <p>
-              Commercial Refrigeration It is very important that you have a refrigerator, freezer, or walk-in cooler that works. Don't let your food spoil when we can ensure that it stays cool and
+              Commercial Refrigeration It is very important that you have a refrigerator, freezer, or walk-in cooler that works. Do not let your food spoil when we can ensure that it stays cool and
               fresh.
             </p>
           </div>
