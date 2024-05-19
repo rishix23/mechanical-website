@@ -1,40 +1,78 @@
-.header {
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
-  .services {
+.heroContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+  
+.heroImage {
+    border-radius: 10px;
+}
+  
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+  /* Services Section */
+.services {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
+}
   
-  .serviceBox {
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
+.serviceBox {
+    background: linear-gradient(135deg, #6fd1ff, #1a75ff);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    width: 280px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
   }
   
   .serviceBox:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .serviceBox img {
-    border-radius: 8px;
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
   }
   
-  .serviceBox h2 {
-    color: #333;
+.serviceBox h2 {
+    font-size: 1.5rem;
     margin-top: 10px;
-  }
+    color: #ffffff;
+ }
   
-  .serviceBox p {
-    color: brown;
+.serviceBox p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+  
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .serviceBox {
+      width: 100%;
+      margin: 10px 0;
+    }
   }
   
