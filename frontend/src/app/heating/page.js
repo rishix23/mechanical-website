@@ -13,7 +13,7 @@ export default function Heating() {
         <div className={styles.header}>
           <h1>Heating Services</h1>
           <p>
-            Just because it's cold outside does not mean it has to feel cold inside your home or business establishment. Stay warm in the winter with assistance from our company. Our heating services
+            Just because its cold outside does not mean it has to feel cold inside your home or business establishment. Stay warm in the winter with assistance from our company. Our heating services
             will fulfill your needs.
           </p>
         </div>
@@ -32,8 +32,8 @@ export default function Heating() {
             <Image alt="Energy Efficient Heating" width={300} height={200} />
             <h2>Energy-Efficient Solutions</h2>
             <p>
-              You'll receive a warm feeling when you see our trucks drive up, and by the time we're done, you'll be putting away those extra blankets. Don't let your old furnace waste energy and run
-              up your heating costs. We boost its efficiency while saving you money.
+              Youll receive a warm feeling when you see our trucks drive up, and by the time were done, youll be putting away those extra blankets. Dont let your old furnace waste energy and run up
+              your heating costs. We boost its efficiency while saving you money.
             </p>
           </div>
           <div className={styles.serviceBox}>
