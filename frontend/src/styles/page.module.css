@@ -7,7 +7,7 @@
 }
 
 .serviceBox {
-  background-color: var(--clr-black);
+  background-color: var(--clr-slate400);
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -28,6 +28,8 @@
 
 .serviceIcon {
   font-size: 40px;
+  width: 40px; /* Ensure all icons have the same width */
+  height: 40px; /* Ensure all icons have the same height */
   margin-bottom: 10px;
   color: #007bff;
 }
