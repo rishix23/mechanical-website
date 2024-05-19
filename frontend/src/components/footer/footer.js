@@ -2,7 +2,11 @@ import Link from "next/link";
 import styles from "./footer.module.css";
 import Logo from "../../../public/favicon.ico";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareFacebook, faSquareTwitter, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faSquareFacebook, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 export default function Footer() {
   return (
@@ -53,10 +57,10 @@ export default function Footer() {
             <FontAwesomeIcon icon={faSquareFacebook} className={styles.icon} />
           </a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faSquareTwitter} className={styles.icon} />
+            <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faSquareInstagram} className={styles.icon} />
+            <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
           </a>
         </div>
       </div>

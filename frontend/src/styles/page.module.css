@@ -34,6 +34,12 @@
   color: #007bff;
 }
 
+.serviceBox h1 {
+  font-size: var(--size-xl);
+  margin: 0;
+  padding: 10px 0 0;
+}
+
 .serviceBox p {
   margin: 0;
   padding: 10px 0 0;
