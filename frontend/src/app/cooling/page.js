@@ -9,7 +9,7 @@ export default function Cooling() {
   return (
     <>
       <Head>
-        <title>Cooling Services</title>
+        <title>Cooling Services!</title>
       </Head>
       <Section className={`${styles.hero} container`}>
         <div className={styles.heroContent}>
