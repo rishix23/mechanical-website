@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
+import Banner from "../components/banner/banner";
 import Navbar from "../components/navbar/navbar";
+
 import Footer from "@/components/footer/footer";
-import About from "./about/page.js";
 import "../styles/modern-normalize.css";
 import "../styles/globals.css";
 import "../styles/utils.css";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Banner />
         <Navbar />
         <main>{children}</main>
         <Footer />

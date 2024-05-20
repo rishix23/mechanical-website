@@ -1,0 +1,27 @@
+.banner {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .banner p {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+  }
+  
+  .banner a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .banner a:hover {
+    text-decoration: underline;
+  }
+  
