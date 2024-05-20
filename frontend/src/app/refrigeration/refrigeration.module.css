@@ -1,0 +1,105 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heroContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.heroImage {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(207, 207, 207, 0.214);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.serviceBox {
+    background: linear-gradient(135deg, #76c7c0, #34a0a4);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+}
+
+.serviceBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.serviceBox h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.serviceBox p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 640px) {
+    .hero {
+        height: 300px;
+    }
+
+    .overlay {
+        width: 90%;
+    }
+
+    .serviceBox {
+        width: 45%;
+        margin: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+
+    .overlay {
+        width: 70%;
+    }
+
+    .serviceBox {
+        width: 30%;
+        margin: 20px;
+    }
+}
