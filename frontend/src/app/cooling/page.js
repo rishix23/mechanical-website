@@ -9,13 +9,13 @@ export default function Cooling() {
   return (
     <>
       <Head>
-        <title>Cooling Services</title>
+        <title>Cooling Services!</title>
       </Head>
       <Section className={`${styles.hero} container`}>
         <div className={styles.heroContent}>
           <Image src="/cooling.jpg" alt="Cooling Services" layout="fill" objectFit="cover" className={styles.heroImage} />
           <div className={styles.overlay}>
-            <h1>Stay Cool with Our Top-Notch Cooling Services</h1>
+            <h1>Stay Cool with Our Top-Notch Cooling Services!</h1>
             <p>Professional air-conditioning services for your home and business.</p>
           </div>
         </div>
