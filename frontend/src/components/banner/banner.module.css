@@ -1,27 +1,39 @@
+/* Fixed Banner */
 .banner {
-    background-color: #333;
+    width: 100%;
+    background-color: red;
     color: white;
     text-align: center;
     padding: 10px 0;
-    font-size: 1rem;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
-  }
-  
-  .banner p {
-    margin: 0;
-    font-family: 'Arial, sans-serif';
+    height: 50px; /* Fixed height for consistent padding */
   }
   
   .banner a {
-    color: #ffcc00;
+    color: #00f;
     text-decoration: none;
-    font-weight: bold;
   }
   
-  .banner a:hover {
-    text-decoration: underline;
+  
+  .banner a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .banner {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .banner {
+      font-size: 1rem;
+    }
   }
   
