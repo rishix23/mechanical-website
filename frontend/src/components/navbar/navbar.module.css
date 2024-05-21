@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px; /* Adjust this value based on the banner height */
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: relative;
-  z-index: 99999; 
+  z-index: 999; 
   font-size: var(--size-md);
   }
 

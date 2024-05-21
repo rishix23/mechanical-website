@@ -4,7 +4,7 @@ import styles from "./banner.module.css";
 const Banner = () => {
   return (
     <div className={styles.banner}>
-      <p>Offering 24/7 Service! Call us anytime at +1234567890</p>
+      <p>Offering 24/7 Service! Call us anytime at 609-748-1234</p>
     </div>
   );
 };
