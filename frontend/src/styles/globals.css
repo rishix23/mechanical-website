@@ -101,6 +101,6 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 0; /* Remove any additional padding */
+  padding-top: 50px; /* Remove any additional padding */
   /* border: palevioletred solid */
 }

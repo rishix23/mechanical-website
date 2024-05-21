@@ -1,7 +1,6 @@
-/* Fixed Banner */
 .banner {
     width: 100%;
-    background-color: red;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -9,7 +8,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    height: 50px; /* Fixed height for consistent padding */
+    height: 50px;
   }
   
   .banner a {
@@ -17,11 +16,6 @@
     text-decoration: none;
   }
   
-  
-  .banner a {
-    color: #00f;
-    text-decoration: none;
-  }
   
   /* Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) {
