@@ -1,0 +1,59 @@
+/* styles/common.module.css */
+.serviceBox {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .serviceBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .serviceBox h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ffffff;
+  }
+  
+  .serviceBox p {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* sm */
+  @media (min-width: 640px) {
+    .serviceBox {
+      width: 45%;
+      margin: 20px;
+    }
+  }
+  
+  /* md */
+  @media (min-width: 768px) {
+    .serviceBox {
+      width: 30%;
+      margin: 20px;
+    }
+  }
+  

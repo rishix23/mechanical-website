@@ -11,7 +11,10 @@
 }
   
 .serviceBox {
-    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e11717;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,7 +29,7 @@
     transform: scale(1.05);
   }
   
-.serviceBox img {
+/* .serviceBox img {
     border-radius: 8px;
   }
   
@@ -36,6 +39,29 @@
   }
   
 .serviceBox p {
-    color: #666;
+    color: #66;
+  } */
+  
+  .serviceBox img {
+    display: flex;
+    font-size: 40px;
+    /* margin-bottom: 10px; */
+    width: 40px; /* Ensure all icons have the same width */
+    height: 40px; /* Ensure all icons have the same height */
+    color: #007bff;
+  }
+  
+  .serviceBox h2 {
+    display: flex;
+    font-size: var(--size-xl);
+    margin-bottom: 40px;
+    /* margin: 0;
+    padding: 40px 0 0; */
+  }
+  
+  .serviceBox p {
+    display: flex;
+    /* margin: 0;
+    padding: 40px 0 0; */
   }
   
