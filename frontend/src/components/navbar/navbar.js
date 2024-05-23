@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.css";
-import Logo from "../../../public/Logo.svg";
+import Logo from "../../../public/logo_old.svg";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} container`}>
       <div className={styles.logoContainer}>
-        <Image src={Logo} alt="Logo" layout="intrinsic" width={150} height={150} />
+        <Image src={Logo} alt="Logo" layout="intrinsic" className={styles.navbar__image} />
       </div>
       <Link className={styles.navbar__link} href="/">
         Home
