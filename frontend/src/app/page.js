@@ -1,19 +1,35 @@
+"use client";
+
 import Head from "next/head";
 import Section from "../components/section/section.js";
 import styles from "../styles/page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSnowflake, faFire, faIndustry } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import Carousel from "../components/carousel/carousel";
 
 export default function Home() {
   return (
     <>
-      <Section className="container">
-        <Head>
-          <title>Home</title>
-        </Head>
-        <h1>Home</h1>
-        <p>This is the home page</p>
+      <Head>
+        <title>D.R Mechanical Heating Cooling Refrigeration LLC</title>
+        <meta name="description" content="HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County. Fire, EMT, Senior Citizens, and Veterans Discounts available." />
+      </Head>
+
+      {/* Hero Section */}
+      <Section className={`${styles.hero} container`}>
+        <Image src="/hvac-repair.webp" alt="HVAC Services" layout="fill" objectFit="cover" className={styles.heroImage} />
+        <div className={styles.heroTextContainer}>
+          <h1 className={styles.heroTitle}>HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County</h1>
+          <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
+        </div>
       </Section>
+
+      {/* Carousel Section */}
+      <Section className="container section">
+        <Carousel />
+      </Section>
+
       <Section className="container section">
         <div className={styles.services}>
           <div className={styles.serviceBox}>
