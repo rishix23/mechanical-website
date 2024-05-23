@@ -16,7 +16,12 @@
 
 .navbar__link {
     display: none; /* Hide links */
-  }
+    text-decoration: none;
+}
+
+.navbar__link:hover{
+  text-decoration: underline;
+}
 
 .navbar__button {
     display: flex; /* Show button */
@@ -50,6 +55,13 @@
     padding: 5px; /* Add this */
   }
 
+.navbar__button__menu a {
+    text-decoration: none; /* Add this */
+}
+
+.navbar__button__menu a:hover {
+  text-decoration: underline; /* Add this */
+}
 
 
 /* xs */
@@ -62,6 +74,7 @@
         display: block; /* Show links by default */
         margin: auto
     }
+
       
     .navbar__button {
         display: none; /* Hide button by default */
