@@ -1,0 +1,90 @@
+/* styles/Contact.module.css */
+
+  .contact {
+    background: var(--clr-slate400);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #555;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formGroup {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border-color: #0070f3;
+    outline: none;
+  }
+  
+  .submitButton {
+    padding: 15px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .submitButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .contactDetails {
+    margin-top: 40px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .contactDetails h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .map {
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  

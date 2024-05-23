@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px; /* Adjust this value based on the banner height */
+  margin-top: 40px; /* Adjust this value based on the banner height */
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: relative;
   z-index: 999; 
-  font-size: var(--size-md);
+  font-size: var(--size-xs);
   }
 
 .navbar__link {
@@ -45,7 +45,7 @@
 .navbar__button__menu li {
     padding: 5px; /* Add this */
   }
-  
+
 
 /* xs */
 /* @media (min-width: 475px) {
@@ -55,6 +55,7 @@
 @media (min-width: 640px) {
     .navbar__link {
         display: block; /* Show links by default */
+        margin: auto
     }
       
     .navbar__button {
@@ -65,15 +66,17 @@
 } 
 
 /* md */
-@media (min-width: 768px) {
-    .navbar{
-        font-size: var(--size-lg);
-    }
+/* @media (min-width: 768px) {
+  
 
-} 
+}  */
 
 /* lg */
-/* @media (min-width: 1024px) {} */
+@media (min-width: 1024px) {
+  .navbar{
+    font-size: var(--size-lg);
+}
+}
 
 /* xl */
 /* @media (min-width: 1280px) {} */

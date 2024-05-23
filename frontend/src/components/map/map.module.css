@@ -1,0 +1,13 @@
+/* GoogleMap.module.css */
+.infoWindow {
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.map {
+    width: 100%; /* Change this to your desired width */
+    height: 100%; /* Change this to your desired height */
+    border-radius: 10px;
+  }
+  
