@@ -19,86 +19,82 @@
 /* 2xl */
 /* @media (min-width: 1536px) {} */
 
-
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    box-sizing: border-box;
-    border: 5px solid;
-    border-color: blueviolet;
-  }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* Adjust padding if necessary */
+  padding-right: 1rem; /* Adjust padding if necessary */
+  box-sizing: border-box;
+  border: 5px solid;
+  border-color: blueviolet;
+}
 
 .contentWithBanner {
-    padding-top: 40px; /* Adjust according to the height of your banner */
-  }
+  padding-top: 40px; /* Adjust according to the height of your banner */
+}
 
 .section {
-    margin-top: 5rem;
-  }
-  
+  margin-top: 5rem;
+}
 
-/* xxs */
+/* 2xs */
 @media (min-width: 320px) {
-  .container {
-      max-width: 320px;
-      border-color: firebrick;
-      /* add styles for xs screen size */
-    }
+.container {
+    max-width: 310px; /* Adjusted width */
+    border-color: firebrick;
+    /* add styles for xxs screen size */
+}
 }
 
 /* xs */
-@media (min-width: 475px) {
-    .container {
-        max-width: 475px;
-        border-color: blueviolet;
-        /* add styles for xs screen size */
-      }
+@media (min-width: 425px) {
+  .container {
+      max-width: 400px; /* Adjusted width */
+      border-color: blueviolet;
+      /* add styles for xs screen size */
+  }
 }
 
 /* sm */
 @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-      border-color: red;
-    }
+  .container {
+    max-width: 640px; /* Adjusted width */
+    border-color: red;
+  }
 }
 
 /* md */
 @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-      border-color: limegreen;
-      }
+  .container {
+    max-width: 768px; /* Adjusted width */
+    border-color: limegreen;
+  }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-      border-color: yellow;
-      
-      }
-      .section {
-        margin-top: 10rem;
-      }
+  .container {
+    max-width: 1024px; /* Adjusted width */
+    border-color: yellow;
+  }
+  .section {
+      margin-top: 10rem;
+  }
 }
 
 /* xl */
 @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-
-      border-color: pink;
-      }
+  .container {
+    max-width: 1280px; /* Adjusted width */
+    border-color: pink;
+  }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-      border-color: purple;
-      }
+  .container {
+    max-width: 1440px; /* Adjusted width */
+    border-color: purple;
+  }
 }

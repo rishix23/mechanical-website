@@ -46,7 +46,6 @@ export default function Navbar() {
 
       {showMenu && (
         <div className={styles.navbar__button__menu}>
-          <div> {/* Logo here */} </div>
           <ul>
             <li>
               <Link href="/" onClick={() => handleLinkClick()}>

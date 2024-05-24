@@ -21,16 +21,27 @@
 }
 
 .footer__image {
-  width: 150px;
+  width: 0px;
 }
 
 .footer__box ul {
+  text-align: center;
   list-style: none;
   padding: 0;
 }
 
 .footer__box li {
-  margin: 5px 0;
+  margin: 0.2em;
+}
+
+.footer__box a {
+  font-size: 1rem;
+
+  text-decoration: none; /* Add this */
+}
+
+.footer__box a:hover {
+text-decoration: underline; /* Add this */
 }
 
 .footer__box__social__icons {
@@ -57,7 +68,14 @@
 /* @media (min-width: 640px) {
   .footer__box {
       width: var(--size-2xl) ; 
-  }
+}
+
+  .footer {
+    flex-wrap: nowrap; 
+}
+  .footer__image {
+  width: 250px;
+}
 
 }  */
 

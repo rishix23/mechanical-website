@@ -50,7 +50,8 @@
 }
 
 .navbar__button__menu ul {
-  list-style: none; /* Add this */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
 }
 
 .navbar__button__menu li {
