@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import GoogleMap from "../map/map";
 import styles from "./footer.module.css";
-import Logo from "../../../public/favicon.ico";
+import Logo from "../../../public/logo_old.svg";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import GoogleMap from "../map/map";
 
 config.autoAddCss = false;
 
@@ -16,8 +17,7 @@ export default function Footer() {
   return (
     <footer className={`${styles.footer} container section`}>
       <div className={styles.footer__box}>
-        image goes here
-        {/* <img src={Logo}></img> */}
+        <Image src={Logo} alt="Logo" layout="intrinsic" className={styles.footer_image} />
       </div>
       <div className={styles.footer__box}>
         <ul>
@@ -50,10 +50,10 @@ export default function Footer() {
       <div className={styles.footer__box}>
         <h1>Follow Us</h1>
         <div className={styles.footer__box__social__icons}>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/drmechanicalllc" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faSquareFacebook} className={styles.icon} />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/tj-walia-6258466a/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">

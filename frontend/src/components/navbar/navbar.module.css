@@ -3,8 +3,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 40px; /* Adjust this value based on the banner height */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   position: relative;
   z-index: 999; 
   font-size: var(--size-xs);
@@ -25,12 +23,16 @@
 
 .navbar__button {
     display: flex; /* Show button */
-    color: white;
-    width: var(--size-7xl);
-    height: var(--size-7xl);
-    margin-left: 1px;
+    color: var(--clr-slate400);
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+    margin-right: 10px;
     background: transparent; /* Ensure background is transparent */
     border: none; /* Remove default button border */
+}
+
+.navbar__button:hover {
+  color: blue;
 }
 
 .navbar__button__menu {

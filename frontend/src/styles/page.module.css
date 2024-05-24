@@ -1,13 +1,14 @@
 /* Hero Section */
 .hero {
   position: relative;
-  height: 400px;
+  height: 500px;
   color: white;
   text-align: center;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .heroImage {
@@ -18,29 +19,60 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
+  filter: brightness(0.7);
+  transition: transform 20s linear;
+}
+
+.heroImage:hover {
+  transform: scale(1.1);
 }
 
 .heroTextContainer {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(152, 152, 152, 0.555);
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .heroTitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: white;
 }
 
 .heroDiscount {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
+}
+
+.heroButton {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #0056b3;
 }
 
 /* Services Section */
@@ -94,24 +126,24 @@
 /* Media Queries */
 @media (min-width: 640px) {
   .heroTitle {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   
   .heroDiscount {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
 @media (min-width: 768px) {
   .hero {
-    height: 500px;
+    height: 600px;
   }
 
   .heroTitle {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .heroDiscount {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }

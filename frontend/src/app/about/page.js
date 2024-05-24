@@ -20,6 +20,10 @@ export default function About() {
           free quote. We are confident that you will be satisfied with our services. If you are not satisfied we offer you your money back guaranteed.
         </p>
       </section>
+      <section className={`${styles.businessInfo} container`}>
+        <p>Insured and Licensed - NJ License #13VH04955300</p>
+        <p>BBB</p>
+      </section>
     </div>
   );
 }
