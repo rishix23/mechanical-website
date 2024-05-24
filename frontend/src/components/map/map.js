@@ -3,7 +3,7 @@ import styles from "./map.module.css";
 
 const GoogleMap = () => {
   const mapRef = useRef(null);
-  const apiKey = "AIzaSyBJ_Pjm6RhgLdo0d8rdlZrJonpOp2XwVVk";
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   useEffect(() => {
     const initializeMap = () => {
@@ -29,6 +29,8 @@ const GoogleMap = () => {
 
     if (!window.google) {
       const script = document.createElement("script");
+      console.log("keyis: " + apiKey);
+
       script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
       script.async = true;
       script.defer = true;

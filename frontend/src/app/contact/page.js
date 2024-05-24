@@ -1,7 +1,10 @@
+// pages/contact.js
 "use client";
 
 import { useState } from "react";
 import Head from "next/head";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./contact.module.css";
 
 export default function Contact() {
@@ -32,13 +35,26 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        alert("Form submitted successfully");
+        toast.success("Form submitted successfully", {
+          position: "top-right",
+        });
+        setFormData({
+          name: "",
+          subject: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
       } else {
-        alert("Failed to submit form");
+        toast.error("Failed to submit form", {
+          position: "top-right",
+        });
       }
     } catch (error) {
       console.error("Error submitting form", error);
-      alert("Failed to submit form");
+      toast.error("Failed to submit form", {
+        position: "top-right",
+      });
     }
   };
 
@@ -50,7 +66,7 @@ export default function Contact() {
       </Head>
       <section className={styles.contact}>
         <h1>Contact Us</h1>
-        <p>If you have any questions, please dont hesitate to reach out to us. You can contact us via the form below, phone, or visit us at our office. We are here to help you 24/7.</p>
+        <p>If you have any questions, please don't hesitate to reach out to us. You can contact us via the form below, phone, or visit us at our office. We are here to help you 24/7.</p>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name">Name</label>
@@ -98,6 +114,7 @@ export default function Contact() {
             loading="lazy"></iframe>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }
