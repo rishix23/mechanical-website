@@ -1,3 +1,6 @@
+/* xxs */
+/* @media (min-width: 320px) {} */
+
 /* xs */
 /* @media (min-width: 475px) {} */
 
@@ -36,6 +39,16 @@
     margin-top: 5rem;
   }
   
+
+/* xxs */
+@media (min-width: 320px) {
+  .container {
+      max-width: 320px;
+      border-color: firebrick;
+      /* add styles for xs screen size */
+    }
+}
+
 /* xs */
 @media (min-width: 475px) {
     .container {
