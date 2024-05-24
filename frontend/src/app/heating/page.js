@@ -2,6 +2,8 @@ import Head from "next/head";
 import Section from "../../components/section/section";
 import styles from "./heating.module.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt, faFire, faHelmetSafety } from "@fortawesome/free-solid-svg-icons";
 
 export default function Heating() {
   return (
@@ -21,7 +23,7 @@ export default function Heating() {
       <Section className="container section">
         <div className={styles.services}>
           <div className={styles.serviceBox}>
-            <Image alt="Heating Service" width={300} height={200} />
+            <FontAwesomeIcon icon={faFire} className={styles.icon} />
             <h2>Comprehensive Heating Services</h2>
             <p>
               You may feel a bit hesitant to run your heater because you remember hearing a funny noise the last time you used it. Allow us to identify any problems it may be having. We provide sales,
@@ -29,7 +31,7 @@ export default function Heating() {
             </p>
           </div>
           <div className={styles.serviceBox}>
-            <Image alt="Energy Efficient Heating" width={300} height={200} />
+            <FontAwesomeIcon icon={faBolt} className={styles.icon} />
             <h2>Energy-Efficient Solutions</h2>
             <p>
               Youll receive a warm feeling when you see our trucks drive up, and by the time were done, youll be putting away those extra blankets. Dont let your old furnace waste energy and run up
@@ -37,7 +39,7 @@ export default function Heating() {
             </p>
           </div>
           <div className={styles.serviceBox}>
-            <Image alt="Expert Technicians" width={300} height={200} />
+            <FontAwesomeIcon icon={faHelmetSafety} className={styles.icon} />
             <h2>Expert Technicians</h2>
             <p>
               Our skilled technicians have the experience to work with all major brands. We ensure your heating system is always in top condition, providing you with peace of mind during the colder

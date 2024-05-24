@@ -15,7 +15,7 @@ export default function Cooling() {
         <div className={styles.heroContent}>
           <Image src="/cooling.jpeg" alt="Cooling Services" loading="lazy" layout="fill" objectFit="cover" className={styles.heroImage} />
           <div className={styles.overlay}>
-            <h1>Stay Cool with Our Top-Notch Cooling Services!</h1>
+            <h1>Stay Cool with Our Top-Notch Cooling Services</h1>
             <p>Professional air-conditioning services for your home and business.</p>
           </div>
         </div>

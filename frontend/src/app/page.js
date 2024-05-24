@@ -1,12 +1,12 @@
 "use client";
 
 import Head from "next/head";
-import Section from "../components/section/section.js";
-import styles from "../styles/page.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSnowflake, faFire, faIndustry } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import styles from "../styles/page.module.css";
 import Carousel from "../components/carousel/carousel";
+import Section from "../components/section/section.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFire, faIndustry, faFan } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <Section className={`${styles.hero} container`}>
-        <Image src="/hvac-repair.jpg" alt="HVAC Services" layout="fill" objectFit="cover" className={styles.heroImage} />
+        <Image src="/truck.jpg" alt="HVAC Services" layout="fill" objectFit="cover" className={styles.heroImage} />
         <div className={styles.heroTextContainer}>
           <h1 className={styles.heroTitle}>HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County</h1>
           <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
@@ -34,7 +34,7 @@ export default function Home() {
       <Section className="container section">
         <div className={styles.services}>
           <div className={styles.serviceBox}>
-            <FontAwesomeIcon icon={faSnowflake} className={styles.serviceIcon} />
+            <FontAwesomeIcon icon={faFan} className={styles.serviceIcon} />
             <h1>Air Conditioning</h1>
             <p>
               When you need fresh, cool air in your living space, contact D.R. Mechanical Heating, Cooling & Refrigeration, LLC. We provide air-conditioning services that include repairs, maintenance,
