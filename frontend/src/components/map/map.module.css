@@ -1,8 +1,9 @@
 /* GoogleMap.module.css */
 .infoWindow {
+    font-size: var(--size-sm);
     background-color: white;
     color: black;
-    padding: 10px;
+    padding: 2px;
 }
 
 .map {

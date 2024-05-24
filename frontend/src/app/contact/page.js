@@ -66,7 +66,7 @@ export default function Contact() {
       </Head>
       <section className={styles.contact}>
         <h1>Contact Us</h1>
-        <p>If you have any questions, please don't hesitate to reach out to us. You can contact us via the form below, phone, or visit us at our office. We are here to help you 24/7.</p>
+        <p>If you have any questions, please dont hesitate to reach out to us. You can contact us via the form below, phone, or visit us at our office. We are here to help you 24/7.</p>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name">Name</label>

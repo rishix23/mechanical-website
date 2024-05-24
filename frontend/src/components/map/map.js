@@ -10,7 +10,7 @@ const GoogleMap = () => {
       const center = { lat: 39.45575415606578, lng: -74.52691539292539 };
       const map = new window.google.maps.Map(mapRef.current, {
         center,
-        zoom: 15,
+        zoom: 14,
       });
 
       const marker = new window.google.maps.Marker({
