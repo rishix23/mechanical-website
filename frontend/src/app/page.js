@@ -7,8 +7,25 @@ import Carousel from "../components/carousel/carousel";
 import Section from "../components/section/section.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFan, faIcicles, faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("Element is in view:", entry.target);
+          entry.target.classList.add(styles.visible);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(`.${styles.serviceBox}`);
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Head>

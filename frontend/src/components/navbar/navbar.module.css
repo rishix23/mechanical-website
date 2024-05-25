@@ -1,12 +1,17 @@
 .navbar {
   display: flex;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 40px;
+  padding: 5px 20px; /* Reduce padding */
+  height: 60px; /* Set a fixed height */
   justify-content: space-between;
   align-items: center;
   margin-top: 40px; /* Adjust this value based on the banner height */
-  position: relative;
   z-index: 999; 
   font-size: var(--size-xs);
-  }
+  background-color: black;
+}
 
 .navbar__image {
   width: 150px;
@@ -74,8 +79,9 @@
 /* sm */
 @media (min-width: 640px) {
     .navbar__link {
-        display: block; /* Show links by default */
-        margin: auto
+      /* font-size: var(--size-sm); */
+      display: block; /* Show links by default */
+      margin: auto
     }
 
       
@@ -83,6 +89,8 @@
         display: none; /* Hide button by default */
         /* ... other styles ... */
       }
+
+
 
 } 
 

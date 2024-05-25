@@ -1,4 +1,7 @@
+"use client";
+
 import Head from "next/head";
+import { useEffect } from "react";
 import Section from "../../components/section/section";
 import styles from "./cooling.module.css";
 import Image from "next/image";
@@ -6,6 +9,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSnowflake, faWind, faTools } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cooling() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("Element is in view:", entry.target);
+          entry.target.classList.add(styles.visible);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(`.${styles.serviceBox}`);
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
       <Head>

@@ -49,12 +49,47 @@
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     color: white;
+    opacity: 0; /* Initially hidden */
 }
 
-.serviceBox:hover {
+.serviceBox.visible {
+    opacity: 1; /* Make visible when class is added */
+  }
+  
+  .serviceBox:nth-child(odd).visible {
+    animation: fadeInLeft 1s forwards; /* Apply left animation to odd elements */
+  }
+  
+  .serviceBox:nth-child(even).visible {
+    animation: fadeInRight 1s forwards; /* Apply right animation to even elements */
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .serviceBox:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+  }
 
 .icon {
     font-size: 2.5rem;

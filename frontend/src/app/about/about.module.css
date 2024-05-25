@@ -11,14 +11,15 @@
   .aboutUs h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--clr-slate400);
     text-align: center;
   }
   
   .aboutUs p {
-    font-size: 0.7rem;
+    font-size: var(--size-md);
     margin-bottom: 15px;
     text-align: center;
+    color: var(--clr-slate200)
   }
   
 .businessInfo {
@@ -34,8 +35,10 @@
 }
 
 .businessInfo p {
-    font-size: var(--size-xxs);
+    font-size: var(--size-xs);
     padding: 10px;
+    color: var(--clr-slate200)
+
 }
 
 .bbb__image {
