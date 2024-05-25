@@ -6,41 +6,82 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-}
+  }
   
-.aboutUs h1 {
-    font-size: 2.5rem;
+  .aboutUs h1 {
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
     text-align: center;
-}
+  }
   
-.aboutUs p {
-    font-size: 1.1rem;
+  .aboutUs p {
+    font-size: 0.7rem;
     margin-bottom: 15px;
-    text-align: justify;
-}
-
+    text-align: center;
+  }
+  
 .businessInfo {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-top: 50px; /* Added margin for spacing */
-    padding: 20px; /* Added padding for better spacing */
-    background: var(--clr-slate200); /* Added background color for better visibility */
-    border-radius: 10px; /* Added border-radius for styling */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow for styling */
-  }
-.businessInfo {
-    font-size: var(--size-2xl);
+    margin-top: 50px;
+    padding: 10px;
+    background: var(--clr-slate200);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.businessInfo p {
+    font-size: var(--size-xxs);
+    padding: 10px;
 }
 
 .bbb__image {
-    display: flex;
-    padding: 20px;
-    margin: 10px 0; /* Added margin for better spacing */
+    width: 200px;
+    height: 75px;
+    padding: 10px;
+}
+  
+
+/* Media Queries */
+@media (min-width: 425px) {
+    .businessInfo p {
+        font-size: var(--size-xs);
+    }
+
+    .aboutUs h1 {
+        font-size: 3rem;
+      }
+      
+      .aboutUs p {
+        font-size: 1rem;
+      }
 }
 
+/* Media Queries */
+@media (min-width: 640px) {
+    .businessInfo p {
+        font-size: var(--size-md);
+    }
 
+    .bbb__image {
+      width: 300px;
+      height: 150px;
+    }
+}
+  
+  /* @media (min-width: 768px) {
+    .bbb__image {
+      width: 300px;
+      height: 200px;
+    }
+  } */
+  
+  @media (min-width: 1024px) {
+    .aboutUs p {
+        font-size: 1.25rem;
+      }
+  }
   
