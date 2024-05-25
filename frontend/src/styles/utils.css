@@ -41,7 +41,7 @@
 /* 2xs */
 @media (min-width: 320px) {
 .container {
-    max-width: 310px; /* Adjusted width */
+    max-width: 320px; /* Adjusted width */
     border-color: firebrick;
     /* add styles for xxs screen size */
 }
@@ -50,7 +50,7 @@
 /* xs */
 @media (min-width: 425px) {
   .container {
-      max-width: 400px; /* Adjusted width */
+      max-width: 425px; /* Adjusted width */
       border-color: blueviolet;
       /* add styles for xs screen size */
   }

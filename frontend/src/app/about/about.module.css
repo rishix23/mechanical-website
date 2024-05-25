@@ -43,9 +43,8 @@
     height: 75px;
     padding: 10px;
 }
-  
 
-/* Media Queries */
+  /* xxs */
 @media (min-width: 425px) {
     .businessInfo p {
         font-size: var(--size-xs);
@@ -60,7 +59,7 @@
       }
 }
 
-/* Media Queries */
+/* sm */
 @media (min-width: 640px) {
     .businessInfo p {
         font-size: var(--size-md);
@@ -78,10 +77,11 @@
       height: 200px;
     }
   } */
-  
+
+/* lg */
   @media (min-width: 1024px) {
     .aboutUs p {
         font-size: 1.25rem;
-      }
-  }
+    }
+}
   
