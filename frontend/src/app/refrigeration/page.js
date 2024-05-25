@@ -3,7 +3,7 @@ import Section from "../../components/section/section";
 import styles from "./refrigeration.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThermometerThreeQuarters, faHammer, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { faHammer, faGauge, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Refrigeration() {
   return (
@@ -28,7 +28,7 @@ export default function Refrigeration() {
             <p>Prevent walk-in refrigeration issues with our preventative maintenance contracts. We ensure your food products are safe from temperature fluctuations.</p>
           </div>
           <div className={styles.serviceBox}>
-            <FontAwesomeIcon icon={faThermometerThreeQuarters} className={styles.icon} />
+            <FontAwesomeIcon icon={faGauge} className={styles.icon} />
             <h2>Temperature Monitoring</h2>
             <p>Maintain the proper temperature for all of your refrigerated food and beverages. Our systems alert you to issues before they become critical.</p>
           </div>
