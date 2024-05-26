@@ -17,16 +17,21 @@ const generateBlurDataURL = async (imagePath) => {
 
 // Adjust the image paths according to your images directory
 const images = [
-  "./public/Site Files/img1.jpg",
-  "./public/Site Files/img2.jpg",
-  "./public/Site Files/img3.jpg",
-  "./public/Site Files/img4.jpg",
-  "./public/Site Files/img5.jpg",
-  "./public/Site Files/img6.jpg",
-  "./public/Site Files/img7.jpg",
-  "./public/Site Files/img8.jpg",
-  "./public/Site Files/img9.jpg",
+  //   "./public/Site Files/img1.jpg",
+  //   "./public/Site Files/img2.jpg",
+  //   "./public/Site Files/img3.jpg",
+  //   "./public/Site Files/img4.jpg",
+  //   "./public/Site Files/img5.jpg",
+  //   "./public/Site Files/img6.jpg",
+  //   "./public/Site Files/img7.jpg",
+  //   "./public/Site Files/img8.jpg",
+  //   "./public/Site Files/img9.jpg",
   "./public/Site Files/img10.jpg",
+  "./public/Site Files/img11.jpg",
+  "./public/Site Files/img12.jpg",
+  "./public/Site Files/img13.jpg",
+  "./public/Site Files/img14.jpg",
+  "./public/Site Files/img15.jpg",
 ];
 
 (async () => {

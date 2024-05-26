@@ -31,7 +31,6 @@
     color: var(--clr-slate400);
     width: var(--size-4xl);
     height: var(--size-4xl);
-    margin-right: 10px;
     background: transparent; /* Ensure background is transparent */
     border: none; /* Remove default button border */
 }
@@ -47,7 +46,7 @@
   width: 100%;
   height: 100vh;
   background-color: black;
-  text-align: center;
+  font-size: var(--size-sm);  
   display: flex; /* Add this */
   justify-content: center; /* Add this */
   align-items: center; /* Add this */
@@ -55,15 +54,17 @@
 }
 
 .navbar__button__menu ul {
+  text-align: center;
   list-style: none; /* Remove default list styling */
   padding: 0; /* Remove padding */
 }
 
 .navbar__button__menu li {
-    padding: 5px; /* Add this */
+    padding: 20px; /* Add this */
   }
 
 .navbar__button__menu a {
+    font-size: var(--size-2xl);
     text-decoration: none; /* Add this */
 }
 
@@ -78,9 +79,13 @@
 
 /* sm */
 @media (min-width: 640px) {
+    .navbar{
+      font-size: var(--size-sm);
+  }
+
     .navbar__link {
-      /* font-size: var(--size-sm); */
       display: block; /* Show links by default */
+      padding: 3px;
       margin: auto
     }
 
@@ -89,9 +94,6 @@
         display: none; /* Hide button by default */
         /* ... other styles ... */
       }
-
-
-
 } 
 
 /* md */

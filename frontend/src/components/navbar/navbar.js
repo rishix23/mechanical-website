@@ -18,6 +18,7 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setShowMenu(false);
   };
+
   return (
     <nav className={`${styles.navbar} container`}>
       <Image src={Logo} alt="Logo" layout="intrinsic" className={styles.navbar__image} />

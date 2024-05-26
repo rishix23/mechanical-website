@@ -23,8 +23,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem; /* Adjust padding if necessary */
-  padding-right: 1rem; /* Adjust padding if necessary */
+  padding-left: 0.5rem; /* Adjust padding if necessary */
+  padding-right: 0.5rem; /* Adjust padding if necessary */
   box-sizing: border-box;
   border: 5px solid;
   border-color: blueviolet;

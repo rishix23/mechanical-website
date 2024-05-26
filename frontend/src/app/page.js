@@ -7,9 +7,12 @@ import Carousel from "../components/carousel/carousel";
 import Section from "../components/section/section.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFan, faIcicles, faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter(); // Initialize useRouter
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -26,6 +29,10 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const handleQuoteOnClick = () => {
+    router.push("/contact"); // Navigate to the 'contact' page
+  };
+
   return (
     <>
       <Head>
@@ -39,7 +46,9 @@ export default function Home() {
         <div className={styles.heroTextContainer}>
           <h1 className={styles.heroTitle}>HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County</h1>
           <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
-          <button className={styles.heroButton}>Get a Free Quote</button>
+          <button className={styles.heroButton} onClick={handleQuoteOnClick}>
+            Get a Free Quote
+          </button>
         </div>
       </Section>
 

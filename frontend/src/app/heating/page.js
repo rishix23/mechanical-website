@@ -29,13 +29,14 @@ export default function Heating() {
       <Head>
         <title>Heating Services</title>
       </Head>
-      <Section className="container">
-        <div className={styles.header}>
-          <h1>Heating Services</h1>
-          <p>
-            Just because its cold outside does not mean it has to feel cold inside your home or business establishment. Stay warm in the winter with assistance from our company. Our heating services
-            will fulfill your needs.
-          </p>
+      <Section className={`${styles.hero} container`}>
+        <div className={styles.heroContent}>
+          <Image src="/heating.webp" alt="Heating Services" loading="lazy" layout="fill" objectFit="cover" className={styles.heroImage} />
+          <div className={styles.overlay}>
+            <h1>Stay warm in harsher months</h1>
+            Just because its cold outside does not mean it has to feel cold inside your home or business establishment. Stay warm in the winter with assistance from D.R. Mechanical. Our heating
+            services will fulfill your needs.{" "}
+          </div>
         </div>
       </Section>
       <Section className="container section">

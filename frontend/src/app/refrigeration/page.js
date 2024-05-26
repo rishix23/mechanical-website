@@ -31,7 +31,7 @@ export default function Refrigeration() {
       </Head>
       <Section className={`${styles.hero} container`}>
         <div className={styles.heroContent}>
-          <Image src="/refrigeration.jpg" loading="lazy" alt="Commercial Refrigeration" layout="fill" objectFit="cover" className={styles.heroImage} />
+          <Image src="/refrigeration.webp" loading="lazy" alt="Commercial Refrigeration" layout="fill" objectFit="cover" className={styles.heroImage} />
           <div className={styles.overlay}>
             <h1>Reliable Commercial Refrigeration Services</h1>
             <p>Ensuring your food remains at the perfect temperature all the time.</p>

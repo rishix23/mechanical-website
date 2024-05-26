@@ -47,20 +47,51 @@ const photos = [
     src: "/Site Files/img10.jpg",
     blurDataURL: "data:webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAABUB8JQBOgBefybjZQAD8jnA6ORgqRktB62Nl+/spfex8nYD6rcPSVNwNXE+ASgthWaGSi2sedkAAAA==",
   },
+  {
+    src: "/Site Files/img11.jpg",
+    blurDataURL: "data:webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoMABAABUB8JYwCdAD5jWShhi4AAP6wrG8SO/BD//3mIIpHtqhIhHVlWVha3KyqaPovEqirAAA=",
+  },
+  {
+    src: "/Site Files/img12.jpg",
+    blurDataURL: "data:webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoMABAABUB8JQBWABh2azTAWAAAAP07NrXsasFPwTQCA6EldCbEHmKg/LRJPi7NkJTPsgBvrJKAzSl+iAA=",
+  },
+  {
+    src: "/Site Files/img13.jpg",
+    blurDataURL: "data:webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAQCdASoMABAABUB8JaAAAlLKgAD9/E1VgFNs5NjeNTSktVdtIVvzjvBilTsXgVytyfrxtjTmf6lO5IAAAA==",
+  },
+  {
+    src: "/Site Files/img14.jpg",
+    blurDataURL: "data:webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoMABAABUB8JQBOgCINBCzbHF4AAPwoRz7tCXlwilojHOA/HEqN8xoMWzHFsbki8+TQoRRQuQBugASufIIFsxGsAAA=",
+  },
+  {
+    src: "/Site Files/img15.jpg",
+    blurDataURL: "data:webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoMABAABUB8JYgCdADp0hdeyKgAAP4vRK5+KvKJN/cRtt21C4CNVbxsPnfc0IFseVA21OZ1REQfQWV3AXAmpgAA",
+  },
 ];
 
 export default function Photos() {
   return (
-    <div className="container section">
+    <div className="container">
       <Head>
         <title>Photos</title>
       </Head>
-      <h1>Photos</h1>
+      <header className={styles.header}>
+        <h1>Our Photo Gallery</h1>
+        <p>Explore our collection of the team's installments captured in our photo gallery.</p>
+      </header>
       <div className={styles.gallery}>
         {photos.map((photo, index) => (
           <Photo key={index} src={photo.src} blurDataURL={photo.blurDataURL} />
         ))}
       </div>
+      {/* <section className={styles.cta}>
+        <h2>Interested in Our Services?</h2>
+        <p>Contact us today to learn more about what we offer and how we can help you.</p>
+        <button className={styles.ctaButton}>Contact Us</button>
+      </section> */}
+      {/* <footer className={styles.footer}>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </footer> */}
     </div>
   );
 }
@@ -82,7 +113,7 @@ const Photo = ({ src, blurDataURL }) => {
 
   return (
     <div ref={ref} className={`${styles.imageWrapper} ${isLoaded ? styles.loaded : ""}`}>
-      <Image src={src} alt="" layout="fill" objectFit="cover" className={styles.image} placeholder="blur" blurDataURL={blurDataURL} />
+      <Image src={src} alt="" loading="lazy" layout="fill" className={styles.image} placeholder="blur" blurDataURL={blurDataURL} />
     </div>
   );
 };

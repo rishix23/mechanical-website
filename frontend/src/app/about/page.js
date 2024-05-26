@@ -12,7 +12,7 @@ export default function About() {
       <section className={styles.aboutUs}>
         <h1>About Us</h1>
         <p>
-          D.R Mechanical Heating Cooling Refrigeration LLC. was founded in 2006. We are located in Galloway, New Jersey. We serve Atlantic County and Cape May County residents and commercial
+          D.R. Mechanical Heating Cooling Refrigeration LLC. was founded in 2006. We are located in Galloway, New Jersey. We serve Atlantic County and Cape May County residents and commercial
           businesses with heating and cooling services. We ensure that you are comfortable in any weather by providing comprehensive HVAC services. Whether it is the frigid cold of winter or the dog
           days of summer, we keep the temperature perfect for your place.
         </p>

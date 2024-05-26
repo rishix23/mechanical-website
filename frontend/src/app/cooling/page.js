@@ -31,7 +31,7 @@ export default function Cooling() {
       </Head>
       <Section className={`${styles.hero} container`}>
         <div className={styles.heroContent}>
-          <Image src="/cooling.jpeg" alt="Cooling Services" loading="lazy" layout="fill" objectFit="cover" className={styles.heroImage} />
+          <Image src="/cooling.webp" alt="Cooling Services" loading="lazy" layout="fill" objectFit="cover" className={styles.heroImage} />
           <div className={styles.overlay}>
             <h1>Stay Cool with Our Top-Notch Cooling Services</h1>
             <p>Professional air-conditioning services for your home and business.</p>
