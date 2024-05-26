@@ -77,7 +77,7 @@ export default function Photos() {
       </Head>
       <header className={styles.header}>
         <h1>Our Photo Gallery</h1>
-        <p>Explore our collection of the team's installments captured in our photo gallery.</p>
+        <p>Explore our collection of the teams installments captured in our photo gallery.</p>
       </header>
       <div className={styles.gallery}>
         {photos.map((photo, index) => (
