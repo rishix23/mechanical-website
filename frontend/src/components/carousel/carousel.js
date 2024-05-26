@@ -8,11 +8,29 @@ const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     { type: "image", src: "/Site Files/img16.jpg" },
-    { type: "review", name: "John Doe", stars: 5, date: "2 days ago", text: "Great service and friendly staff!" },
+    {
+      type: "review",
+      name: "Amit Kundu",
+      stars: 5,
+      date: "2 days ago",
+      text: "TJ, the owner for this business is an absolute professional! He is very responsive and accessible. TJ recently replaced my heating unit at my rental property in Wildwood, NJ.",
+    },
     { type: "image", src: "/Site Files/img17.jpg" },
-    { type: "review", name: "Jane Smith", stars: 4, date: "1 week ago", text: "Highly recommend this company." },
+    {
+      type: "review",
+      name: "Kurt Meyers",
+      stars: 5,
+      date: "1 week ago",
+      text: "We had several estimates and DR Mechanical was by far the best price! They came the next day with 4 members in the crew and installed our new AC and furnace. ",
+    },
     { type: "image", src: "/Site Files/img18.jpg" },
-    { type: "review", name: "Alice Brown", stars: 5, date: "3 weeks ago", text: "Professional and reliable." },
+    {
+      type: "review",
+      name: "Taylor Kay",
+      stars: 5,
+      date: "3 weeks ago",
+      text: "TJ and his workers are very professional and responsive. He was able to give me a good price for replacing my air conditioner and he fixed my heater as well. ",
+    },
   ];
 
   useEffect(() => {
@@ -24,7 +42,7 @@ const Carousel = () => {
 
   return (
     <div>
-      <h2 className={styles.header}>Look at our happy customers and reviews taken straight from Google Reviews!</h2>
+      <h2 className={styles.header}>Take a look at our customers testimonials taken straight from Google Reviews!</h2>
       <div className={styles.carousel}>
         <div className={styles.track} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
           {slides.map((slide, index) => (
