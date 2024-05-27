@@ -52,9 +52,12 @@
     opacity: 0; /* Initially hidden */
 }
 
-.serviceBox.visible {
-    opacity: 1; /* Make visible when class is added */
-  }
+.visible {
+  opacity: 1; /* Make visible when class is added */
+}
+/* .serviceBox.visible {
+    opacity: 1;
+  } */
   
   .serviceBox:nth-child(odd).visible {
     animation: fadeInLeft 1s forwards; /* Apply left animation to odd elements */
