@@ -18,25 +18,46 @@
 }
 
 .navbar__link {
-    display: none; /* Hide links */
-    text-decoration: none;
+  display: none; /* Hide links */
+  text-decoration: none;
+  color: var(--clr-slate400);
+  position: relative; /* For hover effect */
+  margin: 0 10px; /* Add margin for spacing */
+  padding: 10px 0; /* Add padding for better click area */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.navbar__link:hover{
-  text-decoration: underline;
+.navbar__link:hover {
+  color: #add8e6; /* Change to lighter blue */
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #add8e6; /* Change to lighter blue */
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.navbar__link:hover::after {
+  width: 100%; /* Full width on hover */
 }
 
 .navbar__button {
-    display: flex; /* Show button */
-    color: var(--clr-slate400);
-    width: var(--size-4xl);
-    height: var(--size-4xl);
-    background: transparent; /* Ensure background is transparent */
-    border: none; /* Remove default button border */
+  display: flex; /* Show button */
+  color: var(--clr-slate400);
+  width: var(--size-4xl);
+  height: var(--size-4xl);
+  background: transparent; /* Ensure background is transparent */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
 .navbar__button:hover {
-  color: blue;
+  color: #add8e6; /* Change to lighter blue */
 }
 
 .navbar__button__menu {
@@ -60,60 +81,59 @@
 }
 
 .navbar__button__menu li {
-    padding: 20px; /* Add this */
-  }
+  padding: 20px; /* Add this */
+}
 
 .navbar__button__menu a {
-    font-size: var(--size-2xl);
-    text-decoration: none; /* Add this */
+  font-size: var(--size-2xl);
+  text-decoration: none; /* Add this */
+  color: var(--clr-slate400); /* Ensure link color is consistent */
+  position: relative; /* For hover effect */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar__button__menu a:hover {
-  text-decoration: underline; /* Add this */
+  color: #add8e6; /* Change to lighter blue */
 }
 
+.navbar__button__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust position as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #add8e6; /* Change to lighter blue */
+  transition: width 0.3s ease; /* Smooth width transition */
+}
 
-/* xs */
-/* @media (min-width: 475px) {
-  } */
+.navbar__button__menu a:hover::after {
+  width: 100%; /* Full width on hover */
+}
 
 /* sm */
 @media (min-width: 640px) {
-    .navbar{
-      font-size: var(--size-sm);
+  .navbar {
+    font-size: var(--size-sm);
   }
 
-    .navbar__link {
-      display: block; /* Show links by default */
-      padding: 3px;
-      margin: auto
-    }
+  .navbar__link {
+    display: block; /* Show links by default */
+    padding: 3px;
+    margin: auto;
+  }
 
-      
-    .navbar__button {
-        display: none; /* Hide button by default */
-        /* ... other styles ... */
-      }
-} 
-
-/* md */
-/* @media (min-width: 768px) {
-  
-
-}  */
+  .navbar__button {
+    display: none; /* Hide button by default */
+  }
+}
 
 /* lg */
 @media (min-width: 1024px) {
   .navbar {
     font-size: var(--size-lg);
-}
+  }
   .navbar__image {
-  width: 250px;
+    width: 250px;
+  }
 }
-}
-
-/* xl */
-/* @media (min-width: 1280px) {} */
-
-/* 2xl */
-/* @media (min-width: 1536px) {} */
