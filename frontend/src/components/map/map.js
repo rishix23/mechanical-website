@@ -29,8 +29,6 @@ const GoogleMap = () => {
 
     if (!window.google) {
       const script = document.createElement("script");
-      console.log("keyis: " + apiKey);
-
       script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
       script.async = true;
       script.defer = true;

@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <Section className={`${styles.hero} container`}>
-        <Image src="/truck.jpg" alt="HVAC Services" layout="fill" objectFit="cover" className={styles.heroImage} />
+        <Image src="/truck.jpg" alt="HVAC Services" priority layout="fill" objectFit="cover" className={styles.heroImage} />
         <div className={styles.heroTextContainer}>
           <h1 className={styles.heroTitle}>HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County</h1>
           <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
