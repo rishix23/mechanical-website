@@ -47,6 +47,15 @@
 }
 }
 
+/* xxs */
+@media (min-width: 375px) {
+  .container {
+      max-width: 375px; /* Adjusted width */
+      border-color: rgb(101, 196, 255);
+      /* add styles for xxs screen size */
+  }
+  }
+
 /* xs */
 @media (min-width: 425px) {
   .container {
