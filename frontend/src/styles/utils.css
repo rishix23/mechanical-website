@@ -27,7 +27,7 @@
   padding-right: 0.5rem; /* Adjust padding if necessary */
   box-sizing: border-box;
   border: 5px solid;
-  border-color: rgb(139, 50, 223);
+  border-color: blueviolet;
 }
 
 .contentWithBanner {
@@ -54,7 +54,7 @@
       border-color: rgb(101, 196, 255);
       /* add styles for xxs screen size */
   }
-  }
+}
 
 /* xs */
 @media (min-width: 425px) {
