@@ -32,7 +32,7 @@ export default function Navbar() {
         Cooling
       </Link>
       <Link className={styles.navbar__link} href="/refrigeration">
-        Refridgeration
+        Refrigeration
       </Link>
       <Link className={styles.navbar__link} href="/about">
         About Us
@@ -65,7 +65,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/refrigeration" onClick={() => handleLinkClick()}>
-                Refridgeration
+                Refrigeration
               </Link>
             </li>
             <li>
