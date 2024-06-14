@@ -1,4 +1,3 @@
-"use client";
 // components/AreasWeServe.js
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "./areas.module.css";

@@ -6,6 +6,8 @@ const GoogleMap = () => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   useEffect(() => {
+    let script;
+
     const initializeMap = () => {
       const center = { lat: 39.45575415606578, lng: -74.52691539292539 };
       const map = new window.google.maps.Map(mapRef.current, {
@@ -27,21 +29,39 @@ const GoogleMap = () => {
       infowindow.open(map, marker);
     };
 
-    if (!window.google) {
-      const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = initializeMap;
-      document.head.appendChild(script);
+    const loadScript = (url) => {
+      return new Promise((resolve, reject) => {
+        script = document.createElement("script");
+        script.src = url;
+        script.async = true;
+        script.defer = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    };
 
-      return () => {
+    const initMap = async () => {
+      if (!window.google) {
+        try {
+          await loadScript(`https://maps.googleapis.com/maps/api/js?key=${apiKey}`);
+          initializeMap();
+        } catch (error) {
+          console.error("Failed to load Google Maps script:", error);
+        }
+      } else {
+        initializeMap();
+      }
+    };
+
+    initMap();
+
+    return () => {
+      if (script) {
         document.head.removeChild(script);
-      };
-    } else {
-      initializeMap();
-    }
-  }, []);
+      }
+    };
+  }, [apiKey]);
 
   return <div ref={mapRef} className={styles.map} />;
 };
