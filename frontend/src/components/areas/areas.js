@@ -10,7 +10,7 @@ const areas = [
   { name: "Avalon", lat: 39.09008, lng: -74.7229 },
   { name: "Sea Isle City", lat: 39.1791, lng: -74.675 },
   { name: "Ocean City", lat: 39.29125339824409, lng: -74.5586785651099 },
-  { name: "Ventnor City", lat: 39.34387254799273, lng: -74.4659679388797 },
+  { name: "Vetnor City", lat: 39.34387254799273, lng: -74.4659679388797 },
   { name: "Galloway", lat: 39.56383238775242, lng: -74.54271981278094 },
   { name: "Brigantine", lat: 40.5141, lng: -112.0325 },
   { name: "Beach Haven", lat: 40.6594, lng: -111.9961 },
@@ -25,7 +25,7 @@ const mapStyles = {
 };
 
 const defaultCenter = {
-  lat: 39.06369299141427,
+  lat: 39.293,
   lng: -74.86230328312534,
 };
 
@@ -40,7 +40,7 @@ const AreasWeServe = () => {
     <div className={`container section ${styles.areasWeServe}`}>
       <div className={styles.mapContainer}>
         <LoadScript googleMapsApiKey={apiKey}>
-          <GoogleMap mapContainerStyle={mapStyles} zoom={8} center={defaultCenter}>
+          <GoogleMap mapContainerStyle={mapStyles} zoom={9} center={defaultCenter}>
             {areas.map((area, index) => (
               <Marker
                 key={index}
