@@ -14,8 +14,10 @@ const areas = [
   { name: "Galloway", lat: 39.56383238775242, lng: -74.54271981278094 },
   { name: "Brigantine", lat: 40.5141, lng: -112.0325 },
   { name: "Beach Haven", lat: 40.6594, lng: -111.9961 },
-  { name: "Long Beach Island", lat: 40.6869, lng: -111.8755 },
+  // { name: "Long Beach Island", lat: 40.6869, lng: -111.8755 },
 ];
+
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
 const mapStyles = {
   height: "400px",
@@ -37,7 +39,7 @@ const AreasWeServe = () => {
   return (
     <div className={`container section ${styles.areasWeServe}`}>
       <div className={styles.mapContainer}>
-        <LoadScript googleMapsApiKey="AIzaSyBJ_Pjm6RhgLdo0d8rdlZrJonpOp2XwVVk">
+        <LoadScript googleMapsApiKey={apiKey}>
           <GoogleMap mapContainerStyle={mapStyles} zoom={8} center={defaultCenter}>
             {areas.map((area, index) => (
               <Marker
@@ -63,14 +65,25 @@ const AreasWeServe = () => {
           </GoogleMap>
         </LoadScript>
       </div>
-      <div className={styles.areasList}>
-        <h2>Areas We Serve</h2>
-        <p>Serving all Atlantic Cape counties for all your HVAC needs</p>
-        {areas.map((area, index) => (
-          <div key={index} className={styles.areaItem}>
-            {area.name}
-          </div>
-        ))}
+      <div className={styles.areasListContainer}>
+        <h2>Areas We Service</h2>
+        <p>We offer services in all of South Jersey from Cape May up to Central Jersey and surrounding areas</p>
+        <div className={styles.areasListWrapper}>
+          <ul>
+            {areas.slice(0, areas.length / 2).map((area, index) => (
+              <li key={index} className={styles.areaItem}>
+                {area.name}
+              </li>
+            ))}
+          </ul>
+          <ul>
+            {areas.slice(areas.length / 2).map((area, index) => (
+              <li key={index} className={styles.areaItem}>
+                {area.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -12,44 +12,55 @@
   height: 400px;
 }
 
-/* .header {
-  background: linear-gradient(180deg, #ff0000, #ff7f00);
-  color: white;
-  padding: 2rem;
-} */
-
-.areasList h2 {
-  font-size: 2rem;
-  padding: 0.5rem;
-}
-
-.areasList p {
-  font-size: 1.2rem;
-  padding: 0.5rem;
-}
-
-.areasList {
+.areasListContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(135deg, #b2bcff, #5a96ff);
-  padding: 1rem;
+  padding: 2rem 1rem;
+}
+
+.areasListContainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.areasListContainer p {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.areasListWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 3rem; /* Add gap between the lists */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.areasListWrapper ul {
+  padding:0
+}
+
+.areasListWrapper li {
+  font-size: 12px
 }
 
 .areaItem {
-  background-color: var(--clr-slate400);
-  color: white;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 5px;
+  margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: bold;
-  transition: transform 0.3s;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
-.areaItem:hover {
-  transform: scale(1.05);
-  background-color: #005bb5;
+.areaItem::before {
+  content: "—"; /* Stylish dash mark */
+  margin-right: 0.5rem;
   color: white;
 }
 
@@ -61,3 +72,64 @@
   white-space: nowrap;
   transform: translate(-50%, -25px); /* Adjust position to avoid overlapping */
 }
+
+
+/* xxs */
+/* @media (min-width: 320px) {
+  
+} */
+
+/* xs */
+/* @media (min-width: 475px) {
+
+} */
+
+/* sm */
+@media (min-width: 640px) {
+  .areasListContainer h2 {
+    font-size: 2rem;
+  }
+  
+  .areasListContainer p {
+    font-size: 1rem;
+  }
+
+  .areasListWrapper {
+    gap: 6rem; /* Add gap between the lists */
+  }
+  
+  .areasListWrapper li {
+    font-size: 18px
+  }
+  
+}
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+  .areasListContainer h2 {
+    font-size: 2.5rem;
+  }
+  
+  .areasListContainer p {
+    font-size: 1.5rem;
+  }
+
+  .areasListWrapper {
+    gap: 8rem; /* Add gap between the lists */
+  }
+  
+  .areasListWrapper li {
+    font-size: 22px
+  }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {
+
+} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
