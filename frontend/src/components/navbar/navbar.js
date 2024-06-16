@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} container`}>
-      <Image src={Logo} alt="Logo" layout="intrinsic" className={styles.navbar__image} />
+      <Image src={Logo} alt="Logo" priority layout="intrinsic" className={styles.navbar__image} />
       <Link className={styles.navbar__link} href="/">
         Home
       </Link>
