@@ -13,8 +13,7 @@ const loadGoogleMapsScript = (apiKey) => {
     }
 
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-    script.async = true;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&loading=async&callback=initMap`;
     script.defer = true;
     script.onload = resolve;
     script.onerror = reject;

@@ -27,13 +27,11 @@ const GoogleMap = () => {
       infowindow.open(map, marker);
     };
 
-    loadGoogleMapsScript(apiKey)
-      .then(() => {
-        initializeMap();
-      })
-      .catch((error) => {
-        console.error("Failed to load Google Maps script:", error);
-      });
+    window.initMap = initializeMap; // Set the global callback function
+
+    loadGoogleMapsScript(apiKey).catch((error) => {
+      console.error("Failed to load Google Maps script:", error);
+    });
   }, [apiKey]);
 
   return <div ref={mapRef} className={styles.map} />;
