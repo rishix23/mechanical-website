@@ -1,4 +1,3 @@
-// components/AreasWeServe.js
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "./areas.module.css";
 import { useEffect, useState } from "react";
@@ -36,6 +35,13 @@ const AreasWeServe = () => {
     setIsClient(true);
   }, []);
 
+  const renderMarkerIcon = () => {
+    return {
+      url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+      scaledSize: new window.google.maps.Size(25, 25),
+    };
+  };
+
   return (
     <div className={`container section ${styles.areasWeServe}`}>
       <div className={styles.mapContainer}>
@@ -48,18 +54,11 @@ const AreasWeServe = () => {
                 label={{
                   text: area.name,
                   color: "#000000",
-                  fontSize: "10px", // Adjust the font size for readability
+                  fontSize: "10px",
                   fontWeight: "bold",
-                  className: styles.markerLabel, // Add custom class for additional styling
+                  className: styles.markerLabel,
                 }}
-                icon={
-                  isClient
-                    ? {
-                        url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // Custom icon URL
-                        scaledSize: new window.google.maps.Size(25, 25), // Adjust the size of the icon
-                      }
-                    : undefined
-                }
+                icon={isClient && window.google && window.google.maps ? renderMarkerIcon() : undefined}
               />
             ))}
           </GoogleMap>
@@ -69,20 +68,11 @@ const AreasWeServe = () => {
         <h2>Areas We Service</h2>
         <p>We offer services in all of South Jersey from Cape May up to Central Jersey and surrounding areas</p>
         <div className={styles.areasListWrapper}>
-          <ul>
-            {areas.slice(0, areas.length / 2).map((area, index) => (
-              <li key={index} className={styles.areaItem}>
-                {area.name}
-              </li>
-            ))}
-          </ul>
-          <ul>
-            {areas.slice(areas.length / 2).map((area, index) => (
-              <li key={index} className={styles.areaItem}>
-                {area.name}
-              </li>
-            ))}
-          </ul>
+          {areas.map((area, index) => (
+            <ul key={index}>
+              <li className={styles.areaItem}>{area.name}</li>
+            </ul>
+          ))}
         </div>
       </div>
     </div>
