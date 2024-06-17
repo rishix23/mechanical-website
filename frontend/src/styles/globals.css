@@ -94,7 +94,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  border: red solid;
 }
 
 main {
@@ -102,5 +101,4 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 50px; /* Remove any additional padding */
-  /* border: palevioletred solid */
 }
