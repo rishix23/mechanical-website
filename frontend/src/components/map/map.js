@@ -17,7 +17,7 @@ const GoogleMap = () => {
       const marker = new window.google.maps.Marker({
         position: center,
         map,
-        title: "D.R Mechanical",
+        title: "D.R. Mechanical",
       });
 
       const infowindow = new window.google.maps.InfoWindow({
