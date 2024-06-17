@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} container`}>
-      <Image src={Logo} alt="Logo" layout="intrinsic" className={styles.navbar__image} />
+      <Image src={Logo} alt="Logo" priority layout="intrinsic" className={styles.navbar__image} />
       <Link className={styles.navbar__link} href="/">
         Home
       </Link>
@@ -32,7 +32,7 @@ export default function Navbar() {
         Cooling
       </Link>
       <Link className={styles.navbar__link} href="/refrigeration">
-        Refridgeration
+        Refrigeration
       </Link>
       <Link className={styles.navbar__link} href="/about">
         About Us
@@ -65,7 +65,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/refrigeration" onClick={() => handleLinkClick()}>
-                Refridgeration
+                Refrigeration
               </Link>
             </li>
             <li>

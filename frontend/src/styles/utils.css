@@ -40,7 +40,6 @@
 @media (min-width: 320px) {
 .container {
     max-width: 320px; /* Adjusted width */
-    /* add styles for xxs screen size */
 }
 }
 
@@ -48,15 +47,13 @@
 @media (min-width: 375px) {
   .container {
       max-width: 375px; /* Adjusted width */
-      /* add styles for xxs screen size */
   }
-  }
+}
 
 /* xs */
 @media (min-width: 425px) {
   .container {
       max-width: 425px; /* Adjusted width */
-      /* add styles for xs screen size */
   }
 }
 

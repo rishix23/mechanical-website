@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./map.module.css";
+import loadGoogleMapsScript from "../../utils/loadGoogleMapsScript";
 
 const GoogleMap = () => {
   const mapRef = useRef(null);
@@ -16,32 +17,22 @@ const GoogleMap = () => {
       const marker = new window.google.maps.Marker({
         position: center,
         map,
-        title: "D.R Mechanical",
+        title: "D.R. Mechanical",
       });
 
       const infowindow = new window.google.maps.InfoWindow({
         content: `<div class="${styles.infoWindow}">D.R Mechanical</div>`,
       });
 
-      // Open the info window immediately
       infowindow.open(map, marker);
     };
 
-    if (!window.google) {
-      const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = initializeMap;
-      document.head.appendChild(script);
+    window.initMap = initializeMap; // Set the global callback function
 
-      return () => {
-        document.head.removeChild(script);
-      };
-    } else {
-      initializeMap();
-    }
-  }, []);
+    loadGoogleMapsScript(apiKey).catch((error) => {
+      console.error("Failed to load Google Maps script:", error);
+    });
+  }, [apiKey]);
 
   return <div ref={mapRef} className={styles.map} />;
 };

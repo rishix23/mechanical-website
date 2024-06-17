@@ -16,6 +16,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -25,6 +27,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -55,6 +58,8 @@ export default function Contact() {
       toast.error("Failed to submit form", {
         position: "top-right",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -88,8 +93,8 @@ export default function Contact() {
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
           </div>
-          <button type="submit" className={styles.submitButton}>
-            Submit
+          <button type="submit" className={styles.submitButton} disabled={loading}>
+            {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
         <div className={styles.contactDetails}>

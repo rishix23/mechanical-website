@@ -16,7 +16,7 @@ export default function Heating() {
         <div className={styles.heroContent}>
           <Image src="/heating.webp" alt="Heating Services" priority layout="fill" objectFit="cover" className={styles.heroImage} />
           <div className={styles.overlay}>
-            <h1>Stay warm in colder months</h1>
+            <h1>Stay Warm in Colder Months</h1>
             Just because its cold outside does not mean it has to feel cold inside your home or business establishment. Stay warm in the winter with assistance from D.R. Mechanical. Our heating
             services will fulfill your needs.{" "}
           </div>
