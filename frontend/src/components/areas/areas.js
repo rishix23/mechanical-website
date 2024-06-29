@@ -52,7 +52,7 @@ const AreasWeServe = () => {
         </div>
         <div className={styles.areasListContainer}>
           <h2>Areas We Service</h2>
-          <p>We offer services in all of South Jersey from Cape May up to Central Jersey and surrounding areas</p>
+          <p>We offer services in all of South Jersey from Cape May to surrounding areas.</p>
           <div className={styles.areasListWrapper}>
             <ul>
               {firstHalf.map((area, index) => (
