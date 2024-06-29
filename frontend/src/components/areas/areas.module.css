@@ -7,9 +7,14 @@
 }
 
 .mapContainer {
-  position: relative;
   width: 100%;
-  height: 400px;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .areasListContainer {
@@ -42,16 +47,13 @@
 }
 
 .areasListWrapper ul {
-  padding:0
-}
-
-.areasListWrapper li {
-  font-size: 12px
+  padding: 0;
+  list-style: none;
 }
 
 .areaItem {
   margin: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: white;
   display: flex;
@@ -64,72 +66,40 @@
   color: white;
 }
 
-.markerLabel {
-  background-color: white;
-  padding: 2px 5px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  white-space: nowrap;
-  transform: translate(-50%, -25px); /* Adjust position to avoid overlapping */
-}
-
-
-/* xxs */
-/* @media (min-width: 320px) {
-  
-} */
-
-/* xs */
-/* @media (min-width: 475px) {
-
-} */
-
 /* sm */
 @media (min-width: 640px) {
   .areasListContainer h2 {
     font-size: 2rem;
   }
-  
+
   .areasListContainer p {
     font-size: 1rem;
   }
 
   .areasListWrapper {
-    gap: 6rem; /* Add gap between the lists */
+    gap: 6rem;
   }
-  
-  .areasListWrapper li {
-    font-size: 18px
-  }
-  
-}
 
-/* md */
-/* @media (min-width: 768px) {} */
+  .areasListWrapper li {
+    font-size: 18px;
+  }
+}
 
 /* lg */
 @media (min-width: 1024px) {
   .areasListContainer h2 {
     font-size: 2.5rem;
   }
-  
+
   .areasListContainer p {
     font-size: 1.5rem;
   }
 
   .areasListWrapper {
-    gap: 8rem; /* Add gap between the lists */
+    gap: 8rem;
   }
-  
+
   .areasListWrapper li {
-    font-size: 22px
+    font-size: 22px;
   }
 }
-
-/* xl */
-/* @media (min-width: 1280px) {
-
-} */
-
-/* 2xl */
-/* @media (min-width: 1536px) {} */
