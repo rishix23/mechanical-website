@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFan, faIcicles, faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import ClientWrapper from "@/components/ClientWrapper/ClientWrapper";
-// import AreasWeServe from "../components/areas/areas";
+import AreasWeServe from "../components/areas/areas";
 
 export default function Home() {
   const router = useRouter(); // Initialize useRouter
@@ -43,7 +43,7 @@ export default function Home() {
       </Section>
 
       {/* Areas We Serve Section */}
-      {/* <AreasWeServe /> */}
+      <AreasWeServe />
 
       <ClientWrapper serviceBoxClass={styles.serviceBox} visibleClass={styles.visible}>
         <Section className="container section">
