@@ -6,23 +6,32 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mapContainer {
   width: 100%;
-  height: 100%;
+  max-width: 1280px; /* Constrain the maximum width of the map */
 }
 
 .map {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 .areasListContainer {
+  width: 100%;
+  max-width: 1280px; /* Constrain the maximum width of the map */
   display: flex;
   flex-direction: column;
   align-items: center;
   background: linear-gradient(135deg, #b2bcff, #5a96ff);
   padding: 2rem 1rem;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .areasListContainer h2 {
@@ -43,7 +52,6 @@
   margin-top: 10px;
   gap: 3rem; /* Add gap between the lists */
   width: 100%;
-  max-width: 1200px;
 }
 
 .areasListWrapper ul {

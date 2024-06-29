@@ -23,14 +23,14 @@ const defaultCenter = {
 
 const generateStaticMapUrl = (apiKey, center, zoom, markers) => {
   const baseUrl = "https://maps.googleapis.com/maps/api/staticmap";
-  const size = "1200x800"; // Increased size for better clarity
+  const size = "600x400"; // Reduced size for a smaller map
   const scale = "2"; // Increased scale for higher resolution
 
   // Generate markers with area names as labels
   const markerParams = markers
     .map((marker) => {
       const label = encodeURIComponent(marker.name); // Encode area name for URL
-      return `markers=color:red|label:${label}|${marker.lat},${marker.lng}`;
+      return `markers=size:small|color:red|label:${label}|${marker.lat},${marker.lng}`;
     })
     .join("&");
 
@@ -46,27 +46,29 @@ const AreasWeServe = () => {
 
   return (
     <div className={`container section ${styles.areasWeServe}`}>
-      <div className={styles.mapContainer}>
-        <img src={mapUrl} alt="Areas We Serve Map" className={styles.map} />
-      </div>
-      <div className={styles.areasListContainer}>
-        <h2>Areas We Service</h2>
-        <p>We offer services in all of South Jersey from Cape May up to Central Jersey and surrounding areas</p>
-        <div className={styles.areasListWrapper}>
-          <ul>
-            {firstHalf.map((area, index) => (
-              <li key={index} className={styles.areaItem}>
-                {area.name}
-              </li>
-            ))}
-          </ul>
-          <ul>
-            {secondHalf.map((area, index) => (
-              <li key={index} className={styles.areaItem}>
-                {area.name}
-              </li>
-            ))}
-          </ul>
+      <div className={styles.contentWrapper}>
+        <div className={styles.mapContainer}>
+          <img src={mapUrl} alt="Areas We Serve Map" className={styles.map} />
+        </div>
+        <div className={styles.areasListContainer}>
+          <h2>Areas We Service</h2>
+          <p>We offer services in all of South Jersey from Cape May up to Central Jersey and surrounding areas</p>
+          <div className={styles.areasListWrapper}>
+            <ul>
+              {firstHalf.map((area, index) => (
+                <li key={index} className={styles.areaItem}>
+                  {area.name}
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {secondHalf.map((area, index) => (
+                <li key={index} className={styles.areaItem}>
+                  {area.name}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
