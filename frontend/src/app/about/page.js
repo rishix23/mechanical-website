@@ -23,7 +23,6 @@ export default function About() {
       </section>
       <section className={`${styles.businessInfo} container`}>
         <p>Insured and Licensed - NJ License #13VH04955300</p>
-        <Image src="/bbb.jpg" alt="BBB Business" width={150} height={100} className={styles.bbb__image} />
       </section>
     </div>
   );
