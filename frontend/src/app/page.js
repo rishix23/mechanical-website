@@ -12,10 +12,10 @@ import ClientWrapper from "@/components/ClientWrapper/ClientWrapper";
 import AreasWeServe from "../components/areas/areas";
 
 export default function Home() {
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter();
 
   const handleQuoteOnClick = () => {
-    router.push("/contact"); // Navigate to the 'contact' page
+    router.push("/contact");
   };
 
   return (
@@ -26,16 +26,46 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <Section className={`${styles.hero} container`}>
-        <Image src="/truck.jpg" alt="HVAC Services" priority layout="fill" objectFit="cover" className={styles.heroImage} />
-        <div className={styles.heroTextContainer}>
-          <h1 className={styles.heroTitle}>HVAC Contractor and HVAC Services serving all of Atlantic and Cape May County</h1>
-          <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
-          <button className={styles.heroButton} onClick={handleQuoteOnClick}>
-            Get a Free Quote
-          </button>
+      <section className={styles.hero}>
+        <div className={styles.heroGrid}></div>
+        <div className={styles.heroContent}>
+          <div className={styles.heroBadge}>
+            <span className={styles.heroBadgeDot}></span>
+            24/7 Emergency Service Available
+          </div>
+          <h1 className={styles.heroTitle}>
+            Expert HVAC Service for <span className={styles.heroHighlight}>South Jersey</span>
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Professional heating, cooling, and refrigeration solutions. Serving Atlantic and Cape May County with trusted local experience.
+          </p>
+          <div className={styles.heroCtas}>
+            <button className={styles.btnPrimary} onClick={handleQuoteOnClick}>
+              Get Free Quote
+              <span className={styles.btnArrow}>→</span>
+            </button>
+            <a href="tel:6097482919" className={styles.btnSecondary}>
+              <span className={styles.btnPhoneIcon}>📞</span>
+              Call Now
+            </a>
+          </div>
+          <div className={styles.heroStats}>
+            <div className={styles.stat}>
+              <div className={styles.statValue}>18<span>+</span></div>
+              <div className={styles.statLabel}>Years Experience</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statValue}>100<span>+</span></div>
+              <div className={styles.statLabel}>5-Star Reviews</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statValue}>24<span>/7</span></div>
+              <div className={styles.statLabel}>Emergency Service</div>
+            </div>
+          </div>
         </div>
-      </Section>
+        <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
+      </section>
 
       {/* Carousel Section */}
       <Section className="container section">
