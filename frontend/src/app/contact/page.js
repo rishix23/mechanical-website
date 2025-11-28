@@ -100,13 +100,9 @@ export default function Contact() {
         <div className={styles.contactDetails}>
           <h2>Our Office</h2>
           <p>
-            1234 Main Street,
+            Phone: (609) 748-2919
             <br />
-            Galloway, NJ 08205
-            <br />
-            Phone: (555) 555-5555
-            <br />
-            Email: info@drmechanical.com
+            Email: drmechanicalllc@gmail.com
           </p>
         </div>
         <div className={styles.map}>
