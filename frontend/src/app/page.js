@@ -1,12 +1,11 @@
 "use client";
 
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/page.module.css";
 import Carousel from "../components/carousel/carousel";
 import Section from "../components/section/section.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFan, faIcicles, faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
+import { faFan, faIcicles, faTemperatureFull, faCheck, faSnowflake, faFire, faClipboardList, faStore, faWind, faBell } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import ClientWrapper from "@/components/ClientWrapper/ClientWrapper";
 import AreasWeServe from "../components/areas/areas";
@@ -65,6 +64,89 @@ export default function Home() {
           </div>
         </div>
         <p className={styles.heroDiscount}>Fire, EMT, Senior Citizens, and Veterans Discounts available</p>
+      </section>
+
+      {/* Trust Bar */}
+      <div className={styles.trustBar}>
+        <div className={styles.trustItem}>
+          <div className={styles.trustIcon}>
+            <FontAwesomeIcon icon={faCheck} />
+          </div>
+          Licensed & Insured
+        </div>
+        <div className={styles.trustItem}>
+          <div className={styles.trustIcon}>
+            <FontAwesomeIcon icon={faCheck} />
+          </div>
+          Free Estimates
+        </div>
+        <div className={styles.trustItem}>
+          <div className={styles.trustIcon}>
+            <FontAwesomeIcon icon={faCheck} />
+          </div>
+          Transparent Pricing
+        </div>
+        <div className={styles.trustItem}>
+          <div className={styles.trustIcon}>
+            <FontAwesomeIcon icon={faCheck} />
+          </div>
+          Veteran & Senior Discounts
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <section className={styles.servicesSection}>
+        <div className={styles.servicesContainer}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionTag}>What We Do</span>
+            <h2 className={styles.sectionTitle}>Complete HVAC Solutions</h2>
+            <p className={styles.sectionSubtitle}>From emergency repairs to full system installations, we have got your comfort covered.</p>
+          </div>
+          <div className={styles.servicesGrid}>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faSnowflake} />
+              </div>
+              <h3>AC Repair & Installation</h3>
+              <p>Reliable cooling service for every brand and system type.</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faFire} />
+              </div>
+              <h3>Furnace & Heating</h3>
+              <p>Expert repairs and tune-ups to keep you warm all winter.</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faClipboardList} />
+              </div>
+              <h3>Maintenance Plans</h3>
+              <p>Preventive care to extend system life and prevent breakdowns.</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faStore} />
+              </div>
+              <h3>Commercial Refrigeration</h3>
+              <p>Fast, dependable service for restaurants and stores.</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faWind} />
+              </div>
+              <h3>Ductwork & Air Quality</h3>
+              <p>Improve airflow and indoor air health professionally.</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={faBell} />
+              </div>
+              <h3>24/7 Emergency Service</h3>
+              <p>Always on call when you need help most. Day or night.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Carousel Section */}

@@ -1,139 +1,201 @@
 .navbar {
-  display: flex;
-  position: -webkit-sticky; /* For Safari */
   position: sticky;
-  top: 40px;
-  padding: 5px 20px; /* Reduce padding */
-  height: 60px; /* Set a fixed height */
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.navbarScrolled {
+  background-color: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px; /* Adjust this value based on the banner height */
-  z-index: 999; 
-  font-size: var(--size-xs);
-  background-color: black;
+  padding: 1rem 1.5rem;
 }
 
-.navbar__image {
-  width: 150px;
+.logoLink {
+  display: flex;
+  align-items: center;
 }
 
-.navbar__link {
-  display: none; /* Hide links */
+.navLogo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navLinks {
+  display: none;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #e2e8f0;
   text-decoration: none;
-  color: var(--clr-slate400);
-  position: relative; /* For hover effect */
-  margin: 0 10px; /* Add margin for spacing */
-  padding: 10px 0; /* Add padding for better click area */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
 }
 
-.navbar__link:hover {
-  color: #add8e6; /* Change to lighter blue */
+.navLink:hover {
+  color: #60a5fa;
 }
 
-.navbar__link::after {
+.navLink::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #add8e6; /* Change to lighter blue */
-  transition: width 0.3s ease; /* Smooth width transition */
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  transition: width 0.3s ease;
 }
 
-.navbar__link:hover::after {
-  width: 100%; /* Full width on hover */
+.navLink:hover::after {
+  width: 100%;
 }
 
-.navbar__button {
-  display: flex; /* Show button */
-  color: var(--clr-slate400);
-  width: var(--size-4xl);
-  height: var(--size-4xl);
-  background: transparent; /* Ensure background is transparent */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer */
+.navCta {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.navbar__button:hover {
-  color: #add8e6; /* Change to lighter blue */
+.navCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
-.navbar__button__menu {
-  position: absolute;
+.navCtaIcon {
+  font-size: 0.85rem;
+}
+
+.navCtaText {
+  white-space: nowrap;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.menuButton:hover {
+  color: #60a5fa;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: black;
-  font-size: var(--size-sm);  
-  display: flex; /* Add this */
-  justify-content: center; /* Add this */
-  align-items: center; /* Add this */
-  flex-direction: column; /* Add this */
+  background-color: rgba(0, 0, 0, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-.navbar__button__menu ul {
-  text-align: center;
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
 }
 
-.navbar__button__menu li {
-  padding: 20px; /* Add this */
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.navbar__button__menu a {
-  font-size: var(--size-2xl);
-  text-decoration: none; /* Add this */
-  color: var(--clr-slate400); /* Ensure link color is consistent */
-  position: relative; /* For hover effect */
-  transition: color 0.3s ease; /* Smooth color transition */
+.mobileLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.navbar__button__menu a:hover {
-  color: #add8e6; /* Change to lighter blue */
+.mobileLink:hover {
+  color: #60a5fa;
 }
 
-.navbar__button__menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Adjust position as needed */
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #add8e6; /* Change to lighter blue */
-  transition: width 0.3s ease; /* Smooth width transition */
+.mobilePhone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
-.navbar__button__menu a:hover::after {
-  width: 100%; /* Full width on hover */
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .navbar {
-    font-size: var(--size-sm);
+/* Tablet and up */
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
   }
 
-  .navbar__link {
-    display: block; /* Show links by default */
-    padding: 3px;
-    margin: auto;
+  .navCta {
+    display: flex;
   }
 
-  .navbar__button {
-    display: none; /* Hide button by default */
+  .menuButton {
+    display: none;
   }
 }
 
-/* lg */
+/* Large screens */
 @media (min-width: 1024px) {
-  .navbar {
-    font-size: var(--size-lg);
+  .navContainer {
+    padding: 1rem 2rem;
   }
-  .navbar__image {
-    width: 250px;
+
+  .navLogo {
+    height: 50px;
+  }
+
+  .navLinks {
+    gap: 2.5rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
   }
 }

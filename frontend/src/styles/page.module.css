@@ -205,7 +205,155 @@
   animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
-/* Services Section */
+/* Trust Bar */
+.trustBar {
+  background: #1e293b;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.trustIcon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+/* Services Section - New Compact Cards */
+.servicesSection {
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5 0%, #e11d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -1px;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSubtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(79, 70, 229, 0.1) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #a5b4fc;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.serviceCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCard p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Old Services Section */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -308,6 +456,54 @@
     width: 100%;
     max-width: 280px;
     justify-content: center;
+  }
+
+  .trustBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .trustItem {
+    font-size: 0.9rem;
+  }
+
+  .servicesSection {
+    padding: 3rem 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .serviceCard {
+    padding: 1.25rem;
+  }
+
+  .serviceCard h3 {
+    font-size: 1rem;
+  }
+
+  .serviceCard p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
