@@ -238,34 +238,56 @@ export default function Home() {
             <span className={styles.sectionTag}>Coverage Area</span>
             <h2 className={styles.sectionTitle}>Proudly Serving South Jersey</h2>
           </div>
-          <div className={styles.areaTags}>
-            <span className={styles.areaTag}>Toms River</span>
-            <span className={styles.areaTag}>Lacey Township</span>
-            <span className={styles.areaTag}>Barnegat</span>
-            <span className={styles.areaTag}>Stafford Township</span>
-            <span className={styles.areaTag}>Manahawkin</span>
-            <span className={styles.areaTag}>Long Beach Island</span>
-            <span className={styles.areaTag}>Little Egg Harbor</span>
-            <span className={styles.areaTag}>Galloway</span>
-            <span className={styles.areaTag}>Absecon</span>
-            <span className={styles.areaTag}>Egg Harbor Township</span>
-            <span className={styles.areaTag}>Ventnor City</span>
-            <span className={styles.areaTag}>Margate City</span>
-            <span className={styles.areaTag}>Longport</span>
-            <span className={styles.areaTag}>Northfield</span>
-            <span className={styles.areaTag}>Linwood</span>
-            <span className={styles.areaTag}>Mays Landing</span>
-            <span className={styles.areaTag}>Somers Point</span>
-            <span className={styles.areaTag}>Ocean City</span>
-            <span className={styles.areaTag}>Marmora</span>
-            <span className={styles.areaTag}>Dennisville</span>
-            <span className={styles.areaTag}>Sea Isle City</span>
-            <span className={styles.areaTag}>Avalon</span>
-            <span className={styles.areaTag}>Stone Harbor</span>
-            <span className={styles.areaTag}>Middle Township</span>
-            <span className={styles.areaTag}>Wildwood</span>
-            <span className={styles.areaTag}>Cape May</span>
-            <span className={styles.areaTag}>Villas</span>
+
+          <div className={styles.countiesGrid}>
+            {/* Atlantic County */}
+            <div className={styles.countyCard}>
+              <h3 className={styles.countyTitle}>Atlantic County</h3>
+              <ul className={styles.locationsList}>
+                <li>Absecon</li>
+                <li>Atlantic City</li>
+                <li>Brigantine</li>
+                <li>Buena</li>
+                <li>Egg Harbor City</li>
+                <li>Egg Harbor Township</li>
+                <li>Galloway</li>
+                <li>Hamilton Township</li>
+                <li>Hammonton</li>
+                <li>Linwood</li>
+                <li>Longport</li>
+                <li>Margate City</li>
+                <li>Mullica Township</li>
+                <li>Northfield</li>
+                <li>Pleasantville</li>
+                <li>Port Republic</li>
+                <li>Somers Point</li>
+                <li>Ventnor City</li>
+              </ul>
+            </div>
+
+            {/* Cape May County */}
+            <div className={styles.countyCard}>
+              <h3 className={styles.countyTitle}>Cape May County</h3>
+              <ul className={styles.locationsList}>
+                <li>Avalon</li>
+                <li>Cape May</li>
+                <li>Cape May Court House</li>
+                <li>Cape May Point</li>
+                <li>Dennis Township</li>
+                <li>Lower Township</li>
+                <li>Middle Township</li>
+                <li>North Wildwood</li>
+                <li>Ocean City</li>
+                <li>Sea Isle City</li>
+                <li>Stone Harbor</li>
+                <li>Upper Township</li>
+                <li>West Cape May</li>
+                <li>West Wildwood</li>
+                <li>Wildwood</li>
+                <li>Wildwood Crest</li>
+                <li>Woodbine</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

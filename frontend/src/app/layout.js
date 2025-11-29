@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import Banner from "../components/banner/banner";
 import Navbar from "../components/navbar/navbar";
 
 import Footer from "@/components/footer/footer";
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body className={inter.className}>
-        <Banner />
         <Navbar />
         <main>{children}</main>
         <Footer />
