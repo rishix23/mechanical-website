@@ -55,16 +55,16 @@ export default function Heating() {
           </div>
           <div className={styles.heroStats}>
             <div className={styles.stat}>
+              <div className={styles.statValue}>1000<span>+</span></div>
+              <div className={styles.statLabel}>Furnaces Serviced</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statValue}>&lt;2<span>hr</span></div>
+              <div className={styles.statLabel}>Response Time</div>
+            </div>
+            <div className={styles.stat}>
               <div className={styles.statValue}>18<span>+</span></div>
-              <div className={styles.statLabel}>Years Experience</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>24<span>/7</span></div>
-              <div className={styles.statLabel}>Emergency Service</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>100<span>%</span></div>
-              <div className={styles.statLabel}>Satisfaction</div>
+              <div className={styles.statLabel}>Years Trusted</div>
             </div>
           </div>
         </div>
