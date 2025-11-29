@@ -310,11 +310,11 @@ export default function Home() {
                 </div>
                 <span>(609) 748-2919</span>
               </a>
-              <a href="tel:6097486580" className={styles.contactPhone}>
+              <a href="tel:6097426580" className={styles.contactPhone}>
                 <div className={styles.contactPhoneIcon}>
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
-                <span>(609) 748-6580</span>
+                <span>(609) 742-6580</span>
               </a>
               <a href="tel:7324755342" className={styles.contactPhone}>
                 <div className={styles.contactPhoneIcon}>
