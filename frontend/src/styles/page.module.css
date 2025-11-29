@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #070a13 0%, #1e293b 50%, #070a13 100%);
+  background: linear-gradient(135deg, #1a1f35 0%, #2d3a52 50%, #1a1f35 100%);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -239,7 +239,7 @@
 /* Services Section - New Compact Cards */
 .servicesSection {
   padding: 5rem 2rem;
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(180deg, #1a2332 0%, #2d3a52 100%);
   position: relative;
 }
 
@@ -356,7 +356,7 @@
 /* Offers Section */
 .offersSection {
   padding: 5rem 2rem;
-  background: #0f172a;
+  background: #1a2332;
   position: relative;
   overflow: hidden;
 }
@@ -451,7 +451,7 @@
 /* Testimonials Section */
 .testimonialsSection {
   padding: 5rem 2rem;
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #2d3a52 0%, #1a2332 100%);
 }
 
 .testimonialsContainer {
@@ -534,7 +534,7 @@
 /* Coverage Area Section */
 .coverageSection {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #1a2332 0%, #2d3a52 100%);
   text-align: center;
 }
 
@@ -571,7 +571,7 @@
 /* Contact Section */
 .contactSection {
   padding: 5rem 2rem;
-  background: #0f172a;
+  background: #1a2332;
   position: relative;
   overflow: hidden;
 }
