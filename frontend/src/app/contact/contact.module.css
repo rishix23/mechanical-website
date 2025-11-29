@@ -1,96 +1,279 @@
-/* styles/Contact.module.css */
-
-.contact {
-  background: var(--clr-slate600);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+/* Form Section */
+.formSection {
+  background: #1a2332;
+  padding: 4rem 1.5rem;
 }
 
-.contact h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--clr-slate400);
-  text-align: center;
+.formContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
-.contact p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--clr-slate200);
-}
-
-.form {
+.formLeft {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.formDescription {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.formFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formFeature {
+  display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.formFeatureIcon {
+  color: #8b5cf6;
+  font-size: 1.25rem;
+}
+
+.formFeature span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+/* Service Area Expandable */
+.serviceAreaFeature {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.serviceAreaHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.serviceAreaHeader span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.countyItem {
+  margin-bottom: 0.75rem;
+}
+
+.countyButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.countyButton:hover {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.chevron {
+  font-size: 0.85rem;
+  color: #8b5cf6;
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.locationsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.locationsList span {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  padding: 0.375rem 0;
+}
+
+/* Form Styles */
+.form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .formGroup {
-  width: 100%;
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .formGroup label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #cbd5e1;
 }
 
 .formGroup input,
 .formGroup textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #64748b;
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
-  border-color: #0070f3;
   outline: none;
+  border-color: #8b5cf6;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .submitButton {
-  padding: 15px;
-  background-color: #0070f3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
   color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
   font-size: 1rem;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
-.submitButton:hover {
-  background-color: #005bb5;
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
 }
 
 .submitButton:disabled {
-  background-color: #ccc;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
-.contactDetails {
-  margin-top: 40px;
-  font-size: var(--size-md);
-  text-align: center;
-  color: var(--clr-slate200);
+.btnArrow {
+  transition: transform 0.3s ease;
+  font-size: 1.25rem;
 }
 
-.contactDetails h2 {
-  color: var(--clr-slate400);
-  font-size: 2rem;
-  margin-bottom: 10px;
+.submitButton:hover:not(:disabled) .btnArrow {
+  transform: translateX(4px);
 }
 
-.map {
-  margin-top: 40px;
-  border-radius: 10px;
-  overflow: hidden;
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .formSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .locationsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+  .formRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formContainer {
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+  .formSection {
+    padding: 5rem 2rem;
+  }
 }
