@@ -1,49 +1,23 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle with dark gradient -->
-  <circle cx="32" cy="32" r="32" fill="url(#darkGradient)"/>
-  
-  <!-- Outer ring with purple gradient -->
-  <circle cx="32" cy="32" r="28" stroke="url(#purpleGradient)" stroke-width="2" fill="none"/>
-  
-  <!-- HVAC symbol - stylized snowflake/flame combination -->
-  <g transform="translate(32, 32)">
-    <!-- Snowflake part (cooling) -->
-    <path d="M 0,-12 L 0,-4 M -8.5,-8.5 L -3,-3 M 8.5,-8.5 L 3,-3" 
-          stroke="url(#coolGradient)" stroke-width="2.5" stroke-linecap="round"/>
-    
-    <!-- Flame part (heating) -->
-    <path d="M 0,4 Q -4,8 0,14 Q 4,8 0,4 Z" 
-          fill="url(#heatGradient)"/>
-    
-    <!-- Center gear/mechanical element -->
-    <circle cx="0" cy="0" r="3.5" fill="url(#centerGradient)" stroke="#1a1f35" stroke-width="0.5"/>
-  </g>
-  
+  <!-- Dark background -->
+  <rect width="64" height="64" fill="#0f172a"/>
+
+  <!-- Purple gradient border -->
+  <rect x="2" y="2" width="60" height="60" rx="8" fill="none" stroke="url(#purpleGradient)" stroke-width="2"/>
+
+  <!-- DR Text -->
+  <text x="32" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="url(#textGradient)" text-anchor="middle">DR</text>
+
   <!-- Gradient definitions -->
   <defs>
-    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a1f35;stop-opacity:1" />
-    </linearGradient>
-    
     <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
     </linearGradient>
-    
-    <linearGradient id="coolGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
-    </linearGradient>
-    
-    <linearGradient id="heatGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
-    </linearGradient>
-    
-    <linearGradient id="centerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a5b4fc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0abfc;stop-opacity:1" />
     </linearGradient>
   </defs>
 </svg>

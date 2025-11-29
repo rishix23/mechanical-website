@@ -303,12 +303,26 @@ export default function Home() {
             <p className={styles.contactDescription}>
               Whether you need emergency repairs or a free quote on a new system, our team is here to help. Reach out today!
             </p>
-            <a href="tel:6097482919" className={styles.contactPhone}>
-              <div className={styles.contactPhoneIcon}>
-                <FontAwesomeIcon icon={faPhone} />
-              </div>
-              <span>(609) 748-2919</span>
-            </a>
+            <div className={styles.phoneNumbers}>
+              <a href="tel:6097482919" className={styles.contactPhone}>
+                <div className={styles.contactPhoneIcon}>
+                  <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <span>(609) 748-2919</span>
+              </a>
+              <a href="tel:6097486580" className={styles.contactPhone}>
+                <div className={styles.contactPhoneIcon}>
+                  <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <span>(609) 748-6580</span>
+              </a>
+              <a href="tel:7324755342" className={styles.contactPhone}>
+                <div className={styles.contactPhoneIcon}>
+                  <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <span>(732) 475-5342</span>
+              </a>
+            </div>
             <div className={styles.contactFeatures}>
               <div className={styles.contactFeature}>
                 <FontAwesomeIcon icon={faCheckCircle} className={styles.contactFeatureIcon} />
