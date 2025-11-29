@@ -1,139 +1,232 @@
 .navbar {
-  display: flex;
-  position: -webkit-sticky; /* For Safari */
   position: sticky;
-  top: 40px;
-  padding: 5px 20px; /* Reduce padding */
-  height: 60px; /* Set a fixed height */
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(26, 31, 53, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  padding: 0;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.navbarScrolled {
+  background: linear-gradient(135deg, rgba(26, 31, 53, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 40px rgba(139, 92, 246, 0.1);
+  border-bottom-color: rgba(139, 92, 246, 0.2);
+}
+
+.navContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px; /* Adjust this value based on the banner height */
-  z-index: 999; 
-  font-size: var(--size-xs);
-  background-color: black;
+  padding: 1rem 1.5rem;
 }
 
-.navbar__image {
-  width: 150px;
+.logoLink {
+  display: flex;
+  align-items: center;
 }
 
-.navbar__link {
-  display: none; /* Hide links */
+.navLogo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navLinks {
+  display: none;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #cbd5e1;
   text-decoration: none;
-  color: var(--clr-slate400);
-  position: relative; /* For hover effect */
-  margin: 0 10px; /* Add margin for spacing */
-  padding: 10px 0; /* Add padding for better click area */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
-.navbar__link:hover {
-  color: #add8e6; /* Change to lighter blue */
+.navLink:hover {
+  color: #c4b5fd;
 }
 
-.navbar__link::after {
+.navLink::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #add8e6; /* Change to lighter blue */
-  transition: width 0.3s ease; /* Smooth width transition */
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  transition: width 0.3s ease;
 }
 
-.navbar__link:hover::after {
-  width: 100%; /* Full width on hover */
+.navLink:hover::after {
+  width: 100%;
 }
 
-.navbar__button {
-  display: flex; /* Show button */
-  color: var(--clr-slate400);
-  width: var(--size-4xl);
-  height: var(--size-4xl);
-  background: transparent; /* Ensure background is transparent */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer */
+.navCta {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  padding: 0.65rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
-.navbar__button:hover {
-  color: #add8e6; /* Change to lighter blue */
+.navCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, #9b6dff, #8b5cf6);
 }
 
-.navbar__button__menu {
-  position: absolute;
+.navCtaIcon {
+  font-size: 0.85rem;
+}
+
+.navCtaText {
+  white-space: nowrap;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.menuButton:hover {
+  color: #c4b5fd;
+  transform: scale(1.1);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: black;
-  font-size: var(--size-sm);  
-  display: flex; /* Add this */
-  justify-content: center; /* Add this */
-  align-items: center; /* Add this */
-  flex-direction: column; /* Add this */
+  background: linear-gradient(135deg, rgba(26, 31, 53, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-.navbar__button__menu ul {
-  text-align: center;
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
 }
 
-.navbar__button__menu li {
-  padding: 20px; /* Add this */
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
 }
 
-.navbar__button__menu a {
-  font-size: var(--size-2xl);
-  text-decoration: none; /* Add this */
-  color: var(--clr-slate400); /* Ensure link color is consistent */
-  position: relative; /* For hover effect */
-  transition: color 0.3s ease; /* Smooth color transition */
+.mobileLink {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.navbar__button__menu a:hover {
-  color: #add8e6; /* Change to lighter blue */
+.mobileLink:hover {
+  color: #c4b5fd;
+  transform: translateX(8px);
 }
 
-.navbar__button__menu a::after {
+.mobileLink::before {
   content: "";
   position: absolute;
-  bottom: -10px; /* Adjust position as needed */
-  left: 0;
-  width: 0;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  width: 12px;
   height: 2px;
-  background-color: #add8e6; /* Change to lighter blue */
-  transition: width 0.3s ease; /* Smooth width transition */
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  transition: transform 0.3s ease;
 }
 
-.navbar__button__menu a:hover::after {
-  width: 100%; /* Full width on hover */
+.mobileLink:hover::before {
+  transform: translateY(-50%) scaleX(1);
 }
 
-/* sm */
-@media (min-width: 640px) {
-  .navbar {
-    font-size: var(--size-sm);
+.mobilePhone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mobilePhone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
   }
 
-  .navbar__link {
-    display: block; /* Show links by default */
-    padding: 3px;
-    margin: auto;
+  .navCta {
+    display: flex;
   }
 
-  .navbar__button {
-    display: none; /* Hide button by default */
+  .menuButton {
+    display: none;
   }
 }
 
-/* lg */
+/* Large screens */
 @media (min-width: 1024px) {
-  .navbar {
-    font-size: var(--size-lg);
+  .navContainer {
+    padding: 1rem 2rem;
   }
-  .navbar__image {
-    width: 250px;
+
+  .navLogo {
+    height: 50px;
+  }
+
+  .navLinks {
+    gap: 2.5rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
   }
 }
