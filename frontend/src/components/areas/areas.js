@@ -48,6 +48,7 @@ const AreasWeServe = () => {
     <div className={`container section ${styles.areasWeServe}`}>
       <div className={styles.contentWrapper}>
         <div className={styles.mapContainer}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={mapUrl} alt="Areas We Serve Map" className={styles.map} />
         </div>
         <div className={styles.areasListContainer}>

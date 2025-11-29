@@ -54,13 +54,13 @@ export default function About() {
           </div>
           <div className={styles.storyContent}>
             <p>
-              D.R. Mechanical Heating Cooling Refrigeration LLC was founded in 2006 with a simple mission: provide honest, reliable HVAC services to South Jersey families and businesses. Located in Galloway, New Jersey, we've grown from a small local operation to one of the most trusted names in HVAC throughout Atlantic and Cape May County.
+              D.R. Mechanical Heating Cooling Refrigeration LLC was founded in 2006 with a simple mission: provide honest, reliable HVAC services to South Jersey families and businesses. Located in Galloway, New Jersey, we&apos;ve grown from a small local operation to one of the most trusted names in HVAC throughout Atlantic and Cape May County.
             </p>
             <p>
-              Whether it's the frigid cold of winter or the dog days of summer, we've been keeping our community comfortable for over 18 years. Our commitment to professional service, transparent pricing, and customer satisfaction has earned us hundreds of five-star reviews and countless loyal customers.
+              Whether it&apos;s the frigid cold of winter or the dog days of summer, we&apos;ve been keeping our community comfortable for over 18 years. Our commitment to professional service, transparent pricing, and customer satisfaction has earned us hundreds of five-star reviews and countless loyal customers.
             </p>
             <p>
-              We're not just another HVAC company—we're your neighbors. We understand the unique climate challenges of South Jersey, and we're available 24/7 to ensure your comfort is never compromised.
+              We&apos;re not just another HVAC company—we&apos;re your neighbors. We understand the unique climate challenges of South Jersey, and we&apos;re available 24/7 to ensure your comfort is never compromised.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function About() {
                 <FontAwesomeIcon icon={faClock} />
               </div>
               <h3>24/7 Availability</h3>
-              <p>HVAC emergencies don't wait for business hours. Neither do we. Call us anytime.</p>
+              <p>HVAC emergencies don&apos;t wait for business hours. Neither do we. Call us anytime.</p>
             </div>
             <div className={styles.valueCard}>
               <div className={styles.valueIcon}>
@@ -100,7 +100,7 @@ export default function About() {
                 <FontAwesomeIcon icon={faStar} />
               </div>
               <h3>Quality Guaranteed</h3>
-              <p>We stand behind our work with a satisfaction guarantee. If you're not happy, we make it right.</p>
+              <p>We stand behind our work with a satisfaction guarantee. If you&apos;re not happy, we make it right.</p>
             </div>
           </div>
         </div>

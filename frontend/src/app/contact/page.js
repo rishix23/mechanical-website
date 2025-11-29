@@ -89,7 +89,7 @@ export default function Contact() {
               <h2 className={styles.sectionTitle}>Request Service or Get a Quote</h2>
             </div>
             <p className={styles.formDescription}>
-              Fill out the form and we'll get back to you as soon as possible. For immediate assistance, please call us at (609) 748-2919.
+              Fill out the form and we&apos;ll get back to you as soon as possible. For immediate assistance, please call us at (609) 748-2919.
             </p>
             <div className={styles.formFeatures}>
               <div className={styles.formFeature}>
