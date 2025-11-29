@@ -68,9 +68,9 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faPhone} className={styles.contactIcon} />
                 <span>(609) 748-2919</span>
               </a>
-              <a href="tel:6097486580" className={styles.contactItem}>
+              <a href="tel:6097426580" className={styles.contactItem}>
                 <FontAwesomeIcon icon={faPhone} className={styles.contactIcon} />
-                <span>(609) 748-6580</span>
+                <span>(609) 742-6580</span>
                 <span className={styles.textBadge}>
                   <FontAwesomeIcon icon={faComment} />
                   Text
